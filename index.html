@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leisten</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<style>
+@media screen and (max-width: 768px) {
+body {
+margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Höhe auf minimal Viewport-Höhe setzen für bessere Skalierung */
+  display: grid;
+  background-image: 
+    radial-gradient(circle at center,
+      rgba(255, 255, 255, 0.3) 85%,
+      rgba(221, 214, 50, 0.35) 90%,
+      rgba(61, 89, 25, 0.45) 95%,
+      rgba(120, 15, 15, 0.5) 99%),
+      url(Startseite/Bilder/Hint.png);
+     
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+
+}
+.vid{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: -1;
+     
+}
+a {
+     color: rgb(255, 255, 255);
+    text-decoration: none;
+ 
+
+
+  }
+.Leistungen{
+ position: absolute;          /* absolut positionieren */
+      top: 50%;
+      right: 0;
+      transform: translate(-20%, -100%);    max-width: 90vw;             /* Breite maximal 90% des Viewports */
+ width: 35%;
+    height: auto;      text-align: center;
+    z-index: 10;
+    font-size: 1rem;
+    padding: 10px;  
+    background-color: rgba(61, 89, 25, 0.8);
+ box-shadow: 0px 2px 5px rgba(120, 15, 15, 0.7) ; /* Schatten hinzufügen */
+border-radius: 50%;
+rotate: 90deg;
+  }
+.Kontakt{
+ position: absolute;          /* absolut positionieren */
+    top:28%;                   /* 25% der Viewport-Höhe von oben */
+    left: 50%;                  /* horizontal zentriert */
+    transform: translateX(-50%); /* exaktes horizontales Zentrieren */
+    max-width: 90vw;             /* Breite maximal 90% des Viewports */
+     width: 35%;
+    height: auto;
+    text-align: center;
+    z-index: 10;
+    font-size: 1rem;
+    border-radius: 30%;
+    padding: 10px;       
+    background-color: rgba(61, 89, 25, 0.8);
+ box-shadow: 0px 2px 5px rgba(120, 15, 15, 0.7) ; /* Schatten hinzufügen */
+border-radius: 50%;
+
+  }
+.Bilder{
+ position: absolute;          /* absolut positionieren */
+  bottom: 30%;                   /* 25% der Viewport-Höhe von oben */
+    left: 50%;                  /* horizontal zentriert */
+    transform: translateX(-50%); /* exaktes horizontales Zentrieren */
+    max-width: 90vw; 
+     width: 35%;
+    height: auto;            /* Breite maximal 90% des Viewports */
+    text-align: center;
+    z-index: 10;
+    font-size: 1rem;
+    border-radius: 30%;
+    padding: 10px;       
+    background-color: rgba(61, 89, 25, 0.8);
+ box-shadow: 0px -2px 5px rgba(120, 15, 15, 0.7) ; /* Schatten hinzufügen */
+border-radius: 50%;
+  }
+.Wissenstransfer{
+ position: absolute;          /* absolut positionieren */
+      top: 50%;
+     left: -0%;
+      transform: translate(20%, -100%);    max-width: 90vw;             /* Breite maximal 90% des Viewports */
+    text-align: center;
+    z-index: 10;
+    font-size: 1rem;
+    padding: 10px;  
+    width: 35%;
+    height: auto;
+    background-color: rgba(61, 89, 25, 0.8);
+ box-shadow: 0px 2px 5px rgba(120, 15, 15, 0.7) ; /* Schatten hinzufügen */
+border-radius: 50%;
+rotate: -90deg; 
+
+}
+ .ovid,.M, .M1{
+    display: none;
+  }
+  .footer {
+      white-space: wrap;        /* Keine Zeilenumbrüche */
+    overflow: hidden;           /* Überlauf verstecken */
+    text-overflow: ellipsis;    /* "..." am Ende */
+    width: auto; 
+    background-color: rgba(255, 255, 255, 0.5);      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+           /* Innenabstände oben/unten */
+    margin-top: 650px;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: black;
+  font-size: 9px;
+
+
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+.Kontakt{
+ position: absolute;          /* absolut positionieren */
+    top:10%;                   /* 25% der Viewport-Höhe von oben */
+    left: 50%;                  /* horizontal zentriert */
+    transform: translateX(-50%); /* exaktes horizontales Zentrieren */
+    max-width: 90vw;             /* Breite maximal 90% des Viewports */
+     width: 20%;
+    height: auto;
+    text-align: center;
+    z-index: 10;
+    font-size: 1rem;
+    border-radius: 30%;
+    padding: 10px;       
+    background-color: rgba(61, 89, 25, 0.8);
+ box-shadow: 0px 2px 5px rgba(120, 15, 15, 0.7) ; /* Schatten hinzufügen */
+border-radius: 50%;
+
+  }
+.Wissenstransfer{
+ position: absolute;          /* absolut positionieren */
+      top: 50%;
+     left: -0%;
+      transform: translate(20%, 100%);    max-width: 90vw;             /* Breite maximal 90% des Viewports */
+    text-align: center;
+    z-index: 10;
+    font-size: 1rem;
+    padding: 10px;  
+    width: 20%;
+    height: auto;
+    background-color: rgba(61, 89, 25, 0.8);
+ box-shadow: 0px 2px 5px rgba(120, 15, 15, 0.7) ; /* Schatten hinzufügen */
+border-radius: 50%;
+rotate: -90deg; 
+
+}
+.Leistungen{
+ position: absolute;          /* absolut positionieren */
+      top: 50%;
+      right: 0;
+      transform: translate(-20%, 100%);    max-width: 90vw;             /* Breite maximal 90% des Viewports */
+ width: 20%;
+    height: auto;      text-align: center;
+    z-index: 10;
+    font-size: 1rem;
+    padding: 10px;  
+    background-color: rgba(61, 89, 25, 0.8);
+ box-shadow: 0px 2px 5px rgba(120, 15, 15, 0.7) ; /* Schatten hinzufügen */
+border-radius: 50%;
+rotate: 90deg;
+  }
+.Bilder{
+ position: absolute;          /* absolut positionieren */
+  bottom: 10%;                   /* 25% der Viewport-Höhe von oben */
+    left: 50%;                  /* horizontal zentriert */
+    transform: translateX(-50%); /* exaktes horizontales Zentrieren */
+    max-width: 90vw; 
+     width: 20%;
+    height: auto;            /* Breite maximal 90% des Viewports */
+    text-align: center;
+    z-index: 10;
+    font-size: 1rem;
+    border-radius: 30%;
+    padding: 10px;       
+    background-color: rgba(61, 89, 25, 0.8);
+ box-shadow: 0px -2px 5px rgba(120, 15, 15, 0.7) ; /* Schatten hinzufügen */
+border-radius: 50%;
+  }
+a {
+     color: rgb(255, 255, 255);
+    text-decoration: none;
+ font-size: 1.5rem;
+
+
+  }
+  .ovid,.M, .M1{
+    display: none;
+  }
+    .footer {
+      white-space: wrap;        /* Keine Zeilenumbrüche */
+    overflow: hidden;           /* Überlauf verstecken */
+    text-overflow: ellipsis;    /* "..." am Ende */
+    width: auto; 
+    background-color: rgba(255, 255, 255, 0.5);      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+           /* Innenabstände oben/unten */
+    margin-top: 50%;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: black;
+  font-size: 9px;
+
+
+}
+}}
+@media (min-width: 1024px) {
+.background-image {
+    position: fixed;
+   filter: brightness(0.75);
+    top: 0; left: 0; right: 0px; bottom: 0;
+    background-image: url('Startseite/Bilder/back2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  /* Radialer Verlauf als Overlay mit kreisförmig zunehmender Transparenz */
+  .background-gradient {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center,
+ rgba(255, 255, 255, 0.3) 85%,
+    rgba(221, 214, 50, 0.35) 90%,    /* transparent in der Mitte */
+      rgba(61, 89, 25, 0.45) 95%,   /* halbtransparent außenrum */
+      rgba(120, 15, 15, 0.5) 99% /* fast deckend am Rand */
+    
+      );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Inhalt über den Hintergründen */
+  .content {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    color: #206708;
+  }
+
+  /* Beispiel-Styling der Menüs */
+  .M {
+    position: absolute;
+    top: 0%;
+    left: 100px;
+    font-size: 45px;
+    display: flex;
+      justify-content: center;  /* horizontal zentrieren */
+  align-items: center; 
+    flex-direction: column;
+    color: #206708;
+
+     
+    transition: transform 0.5s ease
+
+  }
+
+  .M1 {
+    position: absolute;
+ 
+    top: 0%;
+    right: 100px;
+    font-size: 45px;
+    display: flex;
+  justify-content: center;  /* horizontal zentrieren */
+  align-items: center; 
+    flex-direction: column;
+   
+  }
+
+  a {
+    position: relative;
+    margin-top: 42%;
+    box-sizing: content-box ;
+     text-align: center;
+    width: 400px;
+    height: auto;
+    color: #206708;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px 10px rgb(255, 255, 255);
+    border-radius: 15px;
+    overflow: hidden;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+  .b{
+
+  background-color: rgb(255, 255, 255, 1);
+  box-shadow: 0px 0px 30px 10px rgb(255, 255, 255);
+  border-radius: 15px;
+  overflow: hidden;
+       /* wie bisher */
+ display: flex;
+    align-items: center;
+    flex-direction: column;
+  box-sizing: content-box;
+  width: 400px;
+  height: auto;
+
+
+  }
+
+  .vidd {
+    position: absolute;
+  
+      display: flex;
+  justify-content: center;  /* horizontal zentrieren */
+  align-items: center;      /* vertikal zentrieren */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 60px 20px rgba(255, 255, 255, 1);
+    border-radius: 900px;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+  }
+
+  .ovid {
+      display: flex;
+  justify-content: center;  /* horizontal zentrieren */
+  align-items: center;      /* vertikal zentrieren */
+  height: 80vh;  
+
+  }
+video {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+video:hover {
+  transform: scale(1.25);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
+}
+  .Loco {
+    display: none;
+    position: absolute;
+    top: 0%;
+    right: 50px;
+    width: 40px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .Loco1 {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 50px;
+    width: 40px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  a:hover .Loco {
+    display: block;
+    
+  }
+   a:hover .Loco1 {
+    display: block;
+    
+  }
+  a:hover {
+  color: #780F0F; /* Textfarbe ändern */
+ box-shadow: 3px 3px 5px #DDD632 ; /* Schatten hinzufügen */
+ background: radial-gradient(circle at center,
+ rgb(255, 255, 255, 0.7) 85%,
+    rgba(120, 15, 15, 0.55) 90%,    /* transparent in der Mitte */
+      rgba(61, 89, 25, 0.6) 95%,   /* halbtransparent außenrum */
+      rgba(221, 214, 50, 0.65) 99% );/* fast deckend am Rand */
+
+      
+}
+.Leistungen, .vid, .Kontakt,.Wissenstransfer,.Bilder{
+  display: none;
+}
+.footer {
+
+  z-index: 200;
+    background-color: #333 !important;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+
+a:hover .footer {
+  display: block;
+}
+.footer a{
+  background-color: #ffffff;
+  color: black;
+  font-size: small;
+  box-shadow: none;
+}
+}
+  </style>
+
+
+<body>
+
+    <div class="vid">
+<video autoplay loop muted playsinline src="Startseite/Video/Logo.mp4" type="video/mp4" width="auto" height="180px"></video>
+</div>
+
+<div class="Leistungen">
+<a href="Leistungen.html">Leistungen</a>
+</div>
+<div class="Kontakt">
+<a href="Kontakt.html">Kontakt</a>
+</div>
+<div class="Bilder">
+<a href="Bilder.html">Bilder</a>
+</div>
+<div class="Wissenstransfer">
+  <a href="Impressum.html">Impressum</a>
+
+</div>
+
+
+<div class="background-image"></div>
+<div class="background-gradient"></div>
+
+<div class="content">
+  <div class="ovid">
+    <div class="vidd">
+      <video width="650px" height="650px" autoplay loop muted>
+        <source src="Startseite/Video/Logo.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>  
+<div class="M">
+    
+    <a href="Impressum.html">Impressum
+        <img src="Startseite/Bilder/Lockenkopf Logo Trans Hintergr..svg" class="Loco1" alt="Logo" />
+    </a>
+
+    <a href="Leistungen.html">Leistungen
+        <img src="Startseite/Bilder/Lockenkopf Logo Trans Hintergr..svg" class="Loco1" alt="Logo" />
+    </a>
+  </div>
+
+  <div class="M1">
+    <div class="Kon">
+    <a class="b" href="Kontakt.html"> Kontakt
+      <img src="Startseite/Bilder/Lockenkopf Logo Trans Hintergr..svg" class="Loco" alt="Logo" />
+    </a>
+    </div>
+     <div class="bil">
+    <a class="b" href="Bilder.html">Bilder
+      <img src="Startseite/Bilder/Lockenkopf Logo Trans Hintergr..svg" class="Loco" alt="Logo" />
+    </a>
+  </div>
+  </div>
+</div>
+<footer class="footer">
+   <nav>
+  <ul>
+        <a href="">Gerold Langenmayer  Moos 2  88260 Argenbühl  Tel.: 015755441802 </a>
+  
+         <a>© 2025 Lockenkopf. Alle Rechte vorbehalten.</a>
+        <a href="Kontakt.html">Kontakt</a>
+        <a href="Impressum.html">Impressum</a>
+  </ul> 
+
+   </nav>
+</footer>
+
+</head> 
+
+
+
+</body>
+</html>
+</body>

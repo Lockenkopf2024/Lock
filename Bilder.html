@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    display: grid;
+    background-image: 
+      radial-gradient(circle at center,
+        rgba(255, 255, 255, 0.3) 85%,
+        rgba(221, 214, 50, 0.35) 90%,
+        rgba(61, 89, 25, 0.45) 95%,
+        rgba(120, 15, 15, 0.5) 99%),
+        url(Startseite/Bilder/Hint.png);
+    background-repeat: repeat, repeat;
+    background-position: center center, center center;
+    background-size: cover, cover;
+  }
+  .menu {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  right: 35%;
+width: 25vw;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover; 
+  padding: 1rem;
+  z-index: 100;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 80px rgba(221, 214, 50, 0.8);
+}
+.menu a {
+  font-size: 1.8rem;
+  line-height: 325%;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.8em 0.4em;
+  border-radius: 10%;
+  border: solid 5px rgba(221, 214, 50, 0.7);
+ text-decoration: none;
+ color: black;
+}
+
+.menu.show {
+  display: flex;
+}
+
+.Menü img {
+  cursor: pointer;
+  position: fixed;
+  width: 10vw;
+  height: auto;
+  z-index: 10;
+  left: 3%;
+  top: 3%;
+}
+.Allg, .Grab {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 20px;
+  max-width: 95vw;
+  margin: 0 auto;
+  position: relative;  /* Für z-index Stacking */
+}
+
+.Allg img, .Grab img {
+  width: 30vw;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Allg img.zoomed, .Grab img.zoomed {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) scale(1.6) !important;
+  z-index: 1000 !important;
+  width: 60vw !important;
+  height: 60vh !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+h2{
+position: relative;
+left: 3%;
+font-size: 2.9rem;
+margin-top: 15%;
+margin-bottom: 10%;
+}
+.footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: white;
+  font-size: small;
+}
+
+.Insta{
+  position: relative;
+  margin-top: 5%;
+    justify-content: center;
+  text-align: center;
+}
+.Insta h2{
+font-size: 50px;
+color: rgba(61, 89, 25, 1);
+line-height: 100%;
+
+}
+.Insta img{
+  cursor: pointer;
+width: 600px;
+justify-content: center;
+text-align: center;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+}
+a:hover img{
+    transform: scale(1.05); /* Leicht vergrößern */
+    transition: all 0.3s ease; /* Sanfter Übergang */
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+  
+  width: 7vw;
+  height: auto;
+  z-index: 10;
+  top: 25%;
+  right: 1%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 20px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 9vw;
+  height: 6vw;
+  z-index: 10;
+  top: 12%;
+ right: 1%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.7);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+}
+
+/* MOBILE QUERFORMAT (Landscape) */
+@media screen and (max-width: 768px){
+    .Menü img {
+    cursor: pointer;
+    position: fixed;
+    width: 25vw;
+    height: auto;
+    z-index: 10;
+  }
+
+  .menu {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 4%;
+  right: 0%;
+width: 80%;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover; 
+  padding: 1rem;
+  z-index: 100;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 80px rgba(221, 214, 50, 0.8);
+}
+.menu a {
+  font-size: 1.6rem;
+  line-height: 325%;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.8em 0.4em;
+  border-radius: 10%;
+  border: solid 5px rgba(221, 214, 50, 0.7);
+ text-decoration: none;
+ color: black;
+}
+
+.menu.show {
+  display: flex;
+}
+
+  h2{
+position: relative;
+
+font-size: 2.9rem;
+top: 35%;
+
+}
+  .Allg, .Grab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    max-width: 95vw;
+    margin: 0 auto;
+    position: relative;
+    top: 0%;
+  }
+  .footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: white;
+  font-size: small;
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+  
+  width: 20vw;
+  height: auto;
+  z-index: 10;
+  top: 3%;
+  left: 46%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 11px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 15vw;
+  height: 10vw;
+  z-index: 20;
+  top: 3%;
+left: 30%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.9);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+}
+.Insta{
+
+    justify-content: center;
+  text-align: center;
+}
+.Insta h2{
+font-size: 20px;
+color: rgba(61, 89, 25, 1);
+line-height: 140%;
+margin-top: 5%;
+padding: 2%;
+}
+.Insta img{
+  position: relative;
+  margin-top: 50%;
+  cursor: pointer;
+width: 300px;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+}
+a:hover img{
+    transform: scale(1.05); /* Leicht vergrößern */
+    transition: all 0.3s ease; /* Sanfter Übergang */
+}
+
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    display: grid;
+    gap: 10vw;
+    max-height: 100vh;
+    padding: 1rem;
+    background-repeat: repeat, repeat;
+    background-position: center center, center center;
+    background-size: cover, cover;
+  }
+  .menu a {
+    font-size: 1.8rem;
+    line-height: 225%;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0.2em 0.4em;
+    border-radius: 10%;
+  }
+
+  .Menü img {
+    cursor: pointer;
+    position: fixed;
+    width: 15vw;
+    height: auto;
+    z-index: 10;
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    width: 40vw;
+    height: 40vw;
+    top: 5%;
+    left: 0;
+    right: 0;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover;
+    padding: 1rem;
+    z-index: 100;
+    border-radius: 100%;
+    flex-direction: column;
+    transform: translateX(+60%);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Allg, .Grab {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 20px;
+    max-width: 95vw;
+    margin: 0 auto;
+    position: relative;
+    top: 0%;
+  }
+
+  .Allg img, .Grab img {
+    width: 40vw;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .Allg img.zoomed, .Grab img.zoomed {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1.6) !important;
+    z-index: 1000 !important;
+    width: 60vw !important;
+    height: 60vh !important;
+    max-width: none !important;
+    object-fit: contain !important;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  }
+h2{
+position: relative;
+
+font-size: 2.9rem;
+top: 0%;
+
+}
+.footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: white;
+  font-size: small;
+}
+.Insta{
+  
+    justify-content: center;
+  text-align: center;
+}
+.Insta h2{
+font-size: 50px;
+color: rgba(61, 89, 25, 1);
+line-height: 140%;
+
+}
+
+.Insta img{
+  cursor: pointer;
+width: 400px;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+}
+a:hover img{
+    transform: scale(1.05); /* Leicht vergrößern */
+    transition: all 0.3s ease; /* Sanfter Übergang */
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+  
+  width: 7vw;
+  height: auto;
+  z-index: 10;
+  top: 5%;
+  left: 40%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 10px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 9vw;
+  height: 6vw;
+  z-index: 10;
+  top: 0.5%;
+ right: 18%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.9);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+}
+
+}  </style>
+
+
+<body>
+
+<div class="Menü">
+  <img class="L" src="Leistungen1/Weitere/Menü2.svg" alt="Bild mit Menü" id="menuButton" />
+  <ul class="menu" id="menuList">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="Leistungen.html">Leistungen</a></li>
+    <li><a href="Kontakt.html">Kontakt</a></li>
+    <li><a href="Bilder.html">Bilder</a></li>
+  </ul>
+</div>
+
+<script>
+// Bestehender Code bleibt
+document.getElementById('menuButton').addEventListener('click', function () {
+  document.getElementById('menuList').classList.toggle('show');
+});
+
+// NEU: Klick außerhalb des Menüs schließt es
+document.addEventListener('click', function(event) {
+  const menuButton = document.getElementById('menuButton');
+  const menuList = document.getElementById('menuList');
+  
+  // Prüfe, ob Klick außerhalb von Menü-Button UND Menü-Liste war
+  if (!menuButton.contains(event.target) && !menuList.contains(event.target)) {
+    menuList.classList.remove('show');
+  }
+});
+    function toggleZoom(img) {
+      img.classList.toggle('zoomed');
+      
+      // Alle anderen Bilder zurücksetzen (optional)
+      document.querySelectorAll('.gallery img').forEach(otherImg => {
+        if (otherImg !== img) {
+          otherImg.classList.remove('zoomed');
+        }
+      });
+    }
+  </script>
+
+  <h2>Allgemein</h2>
+<div Class="Allg">
+
+<img src="Allgemein/Hib.jpg" alt="Hib" onclick="toggleZoom(this)">
+<img src="Allgemein/Hib2.jpg" alt="Hib2" onclick="toggleZoom(this)">
+<img src="Allgemein/Pfl.jpg" alt="Pfl" onclick="toggleZoom(this)">
+<img src="Allgemein/Pfl2.jpg" alt="Pfl2" onclick="toggleZoom(this)">
+<img src="Allgemein/Rodo.jpg" alt="Rodo" onclick="toggleZoom(this)">
+<img src="Allgemein/UL.jpg" alt="UL" onclick="toggleZoom(this)">
+<img src="Allgemein/UL2.jpg" alt="UL2" onclick="toggleZoom(this)">
+</div>
+<h2>Gräber</h2>
+<div class="Grab">
+  
+<img src="Bilder/Bilder/Gräber/B1.jpg" alt="B1" onclick="toggleZoom(this)">
+<img src="Bilder/Bilder/Gräber/B2.jpg" alt="B2" onclick="toggleZoom(this)">
+<img src="Bilder/Bilder/Gräber/B3.jpg" alt="B3" onclick="toggleZoom(this)">
+<img src="Bilder/Bilder/Gräber/B4.jpg" alt="B4" onclick="toggleZoom(this)">
+<img src="Bilder/Bilder/Gräber/B5.jpg" alt="B5" onclick="toggleZoom(this)">
+<img src="Bilder/Bilder/Gräber/K1.jpg" alt="K1" onclick="toggleZoom(this)">
+<img src="Bilder/Bilder/Gräber/K2.jpg" alt="K2" onclick="toggleZoom(this)">
+<img src="Bilder/Bilder/Gräber/K3.jpg" alt="K3" onclick="toggleZoom(this)">
+<img src="Bilder/Bilder/Gräber/K4.jpg" alt="K4" onclick="toggleZoom(this)">
+<img src="Bilder/Bilder/Gräber/K5.jpg" alt="K5" onclick="toggleZoom(this)">
+
+</div>
+
+<div  class="Insta">
+<h2>Für mehr Information: <br> Folge mir auf Instagram</h2>
+ <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
+</a> </div>
+
+<div class="Instaf">
+<a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"> Folge mir auf Instagram</a>
+ <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
+</a> </div>
+ 
+
+<footer class="footer">
+   <nav>
+  <ul>
+        <a href="">Gerold Langenmayer <br> Moos 2 <br> 88260 Argenbühl <br> Tel.: 015755441802 <br></a>
+  
+         <a>© 2025 Lockenkopf. Alle Rechte vorbehalten.</a>
+        <br><a href="Kontakt.html">Kontakt</a>
+        <a href="Impressum.html">Impressum</a>
+  </ul> 
+
+   </nav>
+</footer>
+
+</head>  
+</body>
+</html>

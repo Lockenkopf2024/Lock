@@ -1,0 +1,1183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leisten</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<style>
+  
+  body {
+    margin: 0;
+    padding: 0;
+    max-height: 100vh;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    display: grid;
+    background-image: 
+      radial-gradient(circle at center,
+        rgba(255, 255, 255, 0.3) 85%,
+        rgba(221, 214, 50, 0.35) 90%,
+        rgba(61, 89, 25, 0.45) 95%,
+        rgba(120, 15, 15, 0.5) 99%),
+        url(Startseite/Bilder/Hint.png);
+    background-repeat: repeat, repeat;
+    background-position: center center, center center;
+    background-size: cover, cover;
+  }
+  .menu {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  right: 35%;
+width: 25vw;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover; 
+  padding: 1rem;
+  z-index: 100;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 80px rgba(221, 214, 50, 0.8);
+}
+
+.menu a {
+  font-size: 1.8rem;
+  line-height: 325%;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.8em 0.4em;
+  border-radius: 10%;
+  border: solid 5px rgba(221, 214, 50, 0.7);
+ text-decoration: none;
+ color: black;
+}
+
+.menu.show {
+  display: flex;
+}
+
+.Menü img {
+  cursor: pointer;
+  position: fixed;
+  width: 10vw;
+  height: auto;
+  z-index: 10;
+    left: 2%;
+  top: 3%;
+}
+.Überschrift{
+
+    margin-top: 8%;
+  margin-left: 30%;
+  width: 35%;
+}
+.buttons3{
+position: relative;
+justify-content: center;
+text-align: center;
+width: 90vw;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 4 Spalten → 1 Reihe */
+    gap: 20px;
+    padding: 20px;
+   
+left: 35%;
+right: 0%;
+  background-color: rgba(255, 255, 255, 0.7);
+  }
+  .buttons3 a{
+    text-decoration: none;
+    color: rgba(61, 89, 25, 1)
+  }
+    .item img{
+      width: 230px;
+      height: 230px;
+    }
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+  }
+  .Logo img {
+  position: relative;
+ margin: 0 auto;
+ left: 30%;
+  height: auto;
+  width: 40vw;
+ margin-top: 7%;
+
+}
+  .links, .Leistungen, .Buttons2 a,.Buttons2 img,.Buttons2,.Buttons img{
+    display: none ;
+}
+.LeistungenS{
+  position: fixed;
+
+top: 2%;
+ margin-left: 12%;
+ width: 80vw;
+ height: auto;
+  display: flex;                /* Flexbox aktivieren */
+  flex-wrap: nowrap;            /* Zeilenumbruch vermeiden, alles in einer Zeile */
+  padding: 0.3%;
+  justify-content: center;     /* Elemente horizontal mittig ausrichten */
+  gap: 30px;                    /* Abstand zwischen den Elementen */
+  white-space: nowrap;
+  font-size: 20px;
+  z-index: 15;
+ color: rgba(120, 15, 15, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
+border-radius: 10px;
+border: 6px solid rgba(61, 89, 25, 0.45) ;
+}
+.buttons3,.Gartenpflege, .Schnitt, .Links, .Grab2, .Grab, .Pflanzung, .Vortrag {
+  position: relative;
+  margin-top: 5%;
+  width: 80vw;
+  min-height: auto;
+  max-width: 100%;
+  left: 5%;
+  right: 5%;
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+}
+.Pflanzung {
+  margin-top: 20%;
+}
+
+.Pfl {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+.Pfl img {
+  width: 20vw;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.6rem;
+}
+h2 {
+  font-size: 3rem;
+    background-color: rgba(255, 255, 255, 0.7);
+border-radius: 10px;
+}
+.bill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4%;
+  padding: 1%;
+  background-color: rgba(61, 89, 25, 0.45);
+  box-sizing: border-box;
+  max-width: 90vw;
+  margin: 1rem auto;
+  margin-top: 10%;
+
+}
+.bill img {
+  max-width: 45%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+}
+.Grab, 
+.Grab2 {
+  background-color: rgba(42, 39, 39, 0.8);
+  border-radius: 0%;
+  left: 11%;
+  right: 15%;
+  max-height: auto;
+}
+
+.Grab2 {
+  margin-top: 0%;
+  height: auto;
+}
+
+/* Grab-Links und Überschriften */
+.Grab a, 
+.Grab2 a {
+  color: rgba(255, 255, 255, 1);
+}
+
+.Grab h2, 
+.Grab2 h2 {
+  color: rgba(255, 255, 255, 1);
+  background-color: transparent;
+}
+
+/* Grab-Bild-Container */
+.Grab1,
+.Grab21 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2%;
+  padding: 4%;
+  background-color: black;
+  box-sizing: border-box;
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+.Grab1 {
+  margin-top: 20%;
+}
+
+.Grab21 {
+  margin-top: 8%;
+}
+
+/* Grab-Bilder (unverändert!) */
+.Grab1 img, 
+.Grab21 img {
+  height: 620px;
+}
+.Pflanz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4%;
+  padding: 1%;
+  box-sizing: border-box;
+  max-width: 90vw;
+  margin: 1rem auto;
+  border: 5px solid rgba(221, 214, 50, 0.9);
+  background-color: rgba(61, 89, 25, 0.45);
+  box-shadow: 5px 6px 4px rgba(221, 214, 50, 0.7);
+  margin-top: 0%;
+  left: 11%;
+}
+.Pflanz img {
+  width: 25vw;
+  height: auto;
+}
+.vor img {
+  width: 75vw;
+}
+.vor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4%;
+  padding: 1%;
+  box-sizing: border-box;
+  max-width: 90vw;
+  margin: 1rem auto;
+  border: 5px solid rgba(120, 15, 15, 0.5);
+  background-color: rgba(61, 89, 25, 0.45);
+  box-shadow: 5px 6px 4px rgba(221, 214, 50, 0.7);
+  margin-top: 0%;
+  left: 11%;
+}
+.footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: white;
+  font-size: small;
+}
+.Insta{
+  position: relative;
+  margin-top: 10%;
+    justify-content: center;
+  text-align: center;
+}
+.Insta h2{
+font-size: 50px;
+color: rgba(61, 89, 25, 1);
+line-height: 130%;
+
+}
+.Insta img{
+  cursor: pointer;
+width: 500px;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+}
+a:hover img{
+    transform: scale(1.05); /* Leicht vergrößern */
+    transition: all 0.3s ease; /* Sanfter Übergang */
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+  
+  width: 7vw;
+  height: auto;
+  z-index: 10;
+  top: 27%;
+  right: 1%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 20px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 9vw;
+  height: 6vw;
+  z-index: 10;
+  top: 15%;
+ right: 1%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.7);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+}
+
+
+@media screen and (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+.LeistungenS{
+  display: none;
+}
+  body {
+    margin: 0;
+    padding: 0;
+    max-height: auto;
+    max-width: 100vw;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    display: grid;
+    background-image: 
+      radial-gradient(circle at center,
+        rgba(255, 255, 255, 0.3) 85%,
+        rgba(221, 214, 50, 0.35) 90%,
+        rgba(61, 89, 25, 0.45) 95%,
+        rgba(120, 15, 15, 0.5) 99%),
+        url(Startseite/Bilder/Hint.png);
+    background-repeat: repeat, repeat;
+    background-position: center center, center center;
+    background-size: cover, cover;
+
+  }
+  .buttons3,.Logo img, .links, .Leistungen, .Buttons2 a,.Buttons2 img,.Buttons2,.Buttons img{
+    display: inline ;
+    
+
+}
+.Überschrift{
+
+  display: none;
+  
+}
+.buttons3{
+display: none !important;}
+
+.Logo img{
+  width: 70vw;
+  left: 10%;
+}
+.Buttons img {
+  width: 40vw;
+  height: 40vw;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.Leistungen h2{
+  position: relative;
+margin-top: 13%;
+}
+.Buttons2 {
+  position: fixed;
+  width: auto;
+  height: 55vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  padding: 0.4rem;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 1);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 9;
+}
+.Buttons2 img {
+  width: 10vw;
+  height: 10vw;
+  object-fit: cover;
+}
+.Buttons2 a {
+  font-size: 14px;
+  color: rgba(120, 15, 15, 0.8);
+}
+.Grab, .Grab2, .Logo img .Gartenpflege, .Schnitt, .Links, .Grab2, .Grab, .Pflanzung, .Vortrag {
+  position: relative;
+  margin-top: 15%;
+  width: 75vw;
+  min-height: 125vw;
+  max-width: 600px;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+  left: 5%;
+  
+
+}
+.Gartenpflege{
+    position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  right: 20%;
+  left: 5%;
+  width: 70vw;
+}
+.Pflanzung {
+  margin-top: 20%;
+}
+.Grab2 {
+  margin-top: 0%;
+  height: auto;
+
+
+}
+.Grab2, .Grab {
+  background-color: rgba(42, 39, 39, 0.8);
+  border-radius: 0%;
+
+}
+.Grab2 a, .Grab a {
+  color: rgba(255, 255, 255, 1);
+  padding-right: 11%;
+
+}
+.Pfl {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+.Pfl img {
+  width: 22vw;
+}
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2rem;
+}
+.Leistungen a {
+  color: rgba(61, 89, 25, 1);
+  border: 2px solid rgba(61, 89, 25, 0.45);
+  padding-right: 10px;
+  line-height: 1.9rem;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+h2 {
+  font-size: 1.9rem;
+    background-color: rgba(255, 255, 255, 0.7);
+border-radius: 10px;
+}
+.Grab2 h2, .Grab h2 {
+  color: rgba(255, 255, 255, 1);
+    padding-right: 11%;
+   background-color: transparent; 
+}
+.bill {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4%;
+  padding: 1%;
+  background-color: rgba(61, 89, 25, 0.45);
+  box-sizing: border-box;
+  max-width: 90vw;
+  margin: 1rem auto;
+  margin-top: 8%;
+}
+.bill img {
+  max-width: 45%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+}
+.Grab1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2%;
+  padding: 4%;
+  background-color: black;
+  box-sizing: border-box;
+ width: 300px;
+ height: auto;
+
+}
+.Grab21 {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  padding: 4%;
+  background-color: black;
+  box-sizing: border-box;
+  max-width: 90vw;
+  margin: 0 auto;
+  margin-top: 8%;
+}
+.Grab1 img, .Grab21 img{
+width: 30%;
+height: auto;
+}
+.Pflanz {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4%;
+  padding: 1%;
+  box-sizing: border-box;
+  max-width: 90vw;
+  margin: 1rem auto;
+  border: 5px solid rgba(221, 214, 50, 0.9);
+  background-color: rgba(61, 89, 25, 0.45);
+  box-shadow: 5px 6px 4px rgba(221, 214, 50, 0.7);
+  margin-top: 0%;
+
+}
+.Pflanz img {
+  width: 40vw;
+}
+.vor img {
+  width: 85vw;
+}
+.vor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4%;
+  padding: 1%;
+  box-sizing: border-box;
+  max-width: 90vw;
+  margin: 1rem auto;
+  border: 5px solid rgba(120, 15, 15, 0.5);
+  background-color: rgba(61, 89, 25, 0.45);
+  box-shadow: 5px 6px 4px rgba(221, 214, 50, 0.7);
+  margin-top: -5%;
+}
+    .Menü img {
+    cursor: pointer;
+    position: fixed;
+    width: 25vw;
+    height: auto;
+    z-index: 10;
+  }
+
+  .menu {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 4%;
+  right: 0%;
+width: 80%;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover; 
+  padding: 1rem;
+  z-index: 100;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 80px rgba(221, 214, 50, 0.8);
+}
+.menu a {
+  font-size: 1.6rem;
+  line-height: 325%;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.8em 0.4em;
+  border-radius: 10%;
+  border: solid 5px rgba(221, 214, 50, 0.7);
+ text-decoration: none;
+ color: black;
+}
+
+.menu.show {
+  display: flex;
+}
+.footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: white;
+  font-size: small;
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+  
+  width: 20vw;
+  height: auto;
+  z-index: 10;
+  top: 1%;
+  left: 46%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 11px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 15vw;
+  height: 10vw;
+  z-index: 20;
+  top: 0.5%;
+left: 30%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.9);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+}
+.Insta{
+  margin-top: 35%;
+    justify-content: center;
+  text-align: center;
+}
+.Insta h2{
+font-size: 15px;
+color: rgba(61, 89, 25, 1);
+line-height: 140%;
+
+}
+.Insta img{
+  cursor: pointer;
+width: 300px;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+}
+a:hover img{
+    transform: scale(1.05); /* Leicht vergrößern */
+    transition: all 0.3s ease; /* Sanfter Übergang */
+}
+
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    display: grid;
+    gap: 10vw;
+    max-height: 100vh;
+    padding: 1rem;
+    background-repeat: repeat, repeat;
+    background-position: center center, center center;
+    background-size: cover, cover;
+  }
+.LeistungenS{
+  display: none;
+}
+  .Logo img {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    height: auto;
+    width: 70vw;
+    margin-top: 0%;
+    left: 15%;
+  }
+
+  .Gartenpflege, .Schnitt, .Links, .Grab2, .Grab, .Pflanzung, .Vortrag {
+    margin-top: 5vw;
+    width: 90vw;
+    min-height: 50vw;
+    font-size: 1.4rem;
+    padding: 1rem;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+.Leistungen a {
+ margin-top: -10%;
+
+}
+.Leistungen img{
+
+
+  margin-top: -5%;
+}
+  .menu a {
+    font-size: 1.8rem;
+    line-height: 225%;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0.2em 0.4em;
+    border-radius: 10%;
+  }
+
+  .Menü img {
+    cursor: pointer;
+    position: fixed;
+    width: 15vw;
+    height: auto;
+    z-index: 10;
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    width: 40vw;
+    height: 40vw;
+    top: 5%;
+    left: 0;
+    right: 0;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover;
+    padding: 1rem;
+    z-index: 100;
+    border-radius: 100%;
+    flex-direction: column;
+    transform: translateX(+60%);
+    align-items: center;
+    justify-content: center;
+  }
+
+.Leistungen a {
+  color: rgba(61, 89, 25, 1);
+  border: 2px solid rgba(61, 89, 25, 0.45);
+  padding-right: 10px;
+
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+ 
+}
+.Buttons img {
+  width: 40vw;
+  height: 40vw;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.Buttons2 {
+  position: fixed;
+  width: auto;
+  height: 95vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  text-align: right;
+  padding: 0.4rem;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 1);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  z-index: 9;
+}
+
+.Buttons2 img {
+  width: 5vw;
+  height: 5vw;
+  object-fit: cover;
+}
+
+.Buttons2 a {
+  font-size: 14px;
+  color: rgba(120, 15, 15, 0.8);
+}
+
+  a {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.9rem;
+  }
+
+  .Pflanz {
+    margin-top: 10%;
+  }
+
+  .Pflanz img {
+    width: 40vw;
+  }
+  .Grab2 {
+  margin-top: -10%;
+  height: 150vw;
+  width: auto;
+
+
+}
+
+.Grab2, .Grab {
+  background-color: rgba(42, 39, 39, 0.8);
+  border-radius: 0%;
+  right:10%
+}
+
+.Grab2 a, .Grab a {
+  color: rgba(255, 255, 255, 1);
+  
+
+}
+.footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: white;
+  font-size: small;
+}
+.Insta{
+  margin-top: 5%;
+    justify-content: center;
+  text-align: center;
+}
+.Insta h2{
+font-size: 50px;
+color: rgba(61, 89, 25, 1);
+line-height: 140%;
+
+}
+
+.Insta img{
+  cursor: pointer;
+width: 300px;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+}
+a:hover img{
+    transform: scale(1.05); /* Leicht vergrößern */
+    transition: all 0.3s ease; /* Sanfter Übergang */
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+  
+  width: 7vw;
+  height: auto;
+  z-index: 10;
+  top: 5%;
+  right: 10%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 12px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 9vw;
+  height: 6vw;
+  z-index: 10;
+  top: 0.5%;
+left: 36%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.7);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="Menü">
+  <img class="L" src="Leistungen1/Weitere/Menü2.svg" alt="Bild mit Menü" id="menuButton" />
+  <ul class="menu" id="menuList">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="Leistungen.html">Leistungen</a></li>
+    <li><a href="Kontakt.html">Kontakt</a></li>
+    <li><a href="Bilder.html">Bilder</a></li>
+  </ul>
+</div>
+
+<script>
+// Bestehender Code bleibt
+document.getElementById('menuButton').addEventListener('click', function () {
+  document.getElementById('menuList').classList.toggle('show');
+});
+
+// NEU: Klick außerhalb des Menüs schließt es
+document.addEventListener('click', function(event) {
+  const menuButton = document.getElementById('menuButton');
+  const menuList = document.getElementById('menuList');
+  
+  // Prüfe, ob Klick außerhalb von Menü-Button UND Menü-Liste war
+  if (!menuButton.contains(event.target) && !menuList.contains(event.target)) {
+    menuList.classList.remove('show');
+  }
+});
+
+  </script>
+
+ <div id="Leiste" class="Überschrift">
+<h2 >Meine Leistungen für Sie</h2>
+</div>
+
+<div class="buttons3">
+  
+
+  <div class="item">
+    <img class="All" src="Leistungen1/Weitere/Pflege.svg" alt="">
+    <a href="#Gartenpflege">Gartenpflege & Pflanzenpflege</a>
+  </div>
+
+  <div class="item">
+    <img src="Leistungen1/Weitere/Schnitt.svg" alt="">
+    <a href="#Schnitt">Heckenschnitt, Obstbaum-, Baumschnitt und Strauchschnitt</a>
+  </div>
+
+  <div class="item">
+    <img src="Leistungen1/Weitere/Grab.svg" alt="">
+    <a href="#Grab">Grabpflege</a>
+  </div>
+
+  <div class="item">
+    <img class="All" src="Leistungen1/Weitere/Schaufel.svg" alt="">
+    <a href="#Pflanzung">Neupflanzungen von Sträuchern, Bäumen und Stauden</a>
+  </div>
+
+  <div class="item">
+    <img class="All" src="Leistungen1/Weitere/Vortrag.svg" alt="">
+    <a href="#Vortrag">Bildungsangebote und Wissenstransfer</a>
+  </div>
+</div>
+
+<section>
+<div class="LeistungenS">
+<a href="#Leiste" >Leistungen</a></h2>
+<p></p><a href="#Gartenpflege">Gartenpflege</a>
+<p></p><a href="#Schnitt"> Schnittarbeiten</a>
+<p></p><a href="#Grab">Grabpflege</a>
+<p></p><a href="#Pflanzung">Neupflanzungen</a>
+<p></p><a href="#Vortrag"> Wissenstransfer</a>
+
+</section>
+
+</div>
+<div class="Links">
+  <section >
+    <div  id="Leist" class="Leistungen" >
+              <h2  href="#Leist">Meine Leistungen für Sie</h2>
+      <div class="Buttons">
+
+        <p></p><img class="All" src="Leistungen1/Weitere/Pflege.svg" alt="">
+        <a href="#Gartenpflege">Gartenpflege & Pflanzenpflege</a><br>  
+        <p></p><img src="Leistungen1/Weitere/Schnitt.svg" alt="">
+        <a href="#Schnitt"> Heckenschnitt, Obstbaum-, Baumschnitt und Strauchschnitt</a><br>
+        <p></p><img src="Leistungen1/Weitere/Grab.svg" alt="">
+        <a href="#Grab">Grabpflege</a><br>
+        <p></p><img class="All" src="Leistungen1/Weitere/Schaufel.svg" alt="">
+        <a href="#Pflanzung">Neupflanzungen von Sträuchern, Bäumen und Stauden</a><br>
+        <p></p><img class="All" src="Leistungen1/Weitere/Vortrag.svg" alt="">
+        <a href="#Vortrag"> Bildungsangebote und Wissenstransfer</a><br>
+      </div>
+    </div>  
+  </section>
+</div>
+
+<div class="Buttons2">
+  <a href="#Leist"> Leist <br>-ung <br> <img src="Leistungen1/Weitere/Lockenkopf Logo Trans Hintergr..svg" alt=""></a>
+  <a href="#Gartenpflege">Pflege <br><img  class="All" src="Leistungen1/Weitere/Pflege.svg" alt=""></a>
+  <a href="#Schnitt" >Schnitt <br><img  src="Leistungen1/Weitere/Schnitt.svg" alt=""></a>
+  <a href="#Grab">Grab <br><img  src="Leistungen1/Weitere/Grab.svg" alt=""></a>
+  <a href="#Pflanzung">Pflanz <br> -ung <br><img  class="All" src="Leistungen1/Weitere/Schaufel.svg" alt=""></a>
+  <a href="#Vortrag"  >Vortrag <br><img class="All" src="Leistungen1/Weitere/Vortrag.svg" alt=""></a>
+</div>
+
+<div class="Logo">
+  <img src="Leistungen1/Weitere/Lockenkopf Logo Trans Hintergr..svg" alt="">
+</div>
+
+<section >
+  <div id="Gartenpflege" class="Gartenpflege">
+    <h2>Gartenpflege</h2>
+    <p><a>Wir bieten umfassende Dienstleistungen rund um die Pflege Ihres Gartens und Ihrer Pflanzen. </a>
+    <a>mit unserem Fachwissen und persönlichem Einsatz sorgen wir für: </a></br>
+    <p><a>ein gesundes Wachstum, </a></br>
+    <p><a>eine attraktive Gestaltung </a></br>
+    <p><a>und eine nachhaltige Pflege Ihrer Pflanzenwelt.</a></br>
+    <div class="Pfl">
+      <img src="Pflege/god.jpg" alt="">
+      <img src="Pflege/Pfl.jpg" alt="">
+      <img src="Pflege/Ull.jpg" alt="">
+    </div>
+  </div>
+</section>
+
+<section >
+  <div id="Schnitt" class="Schnitt" >
+    <h2>Rückschnitt und Schnittarbeiten</h2><br>
+    <a>Ob Obstbaum-, Heckenschnitt – </a>
+    <a>oder Formschnitt bei Sträuchern</a></p>
+    <a>wir führen alle Arbeiten fachgerecht aus, </a></br>
+    <a>um das Pflanzenwachstum optimal zu fördern</a></br>
+    <a>und für eine ansprechende Form zu sorgen. </a></br>
+    <div class="bill">
+      <img src="Schnitt/Hoch.jpeg" alt="Bild1" >
+      <img src="Schnitt/Schnitt.jpeg" alt="Bild2">
+    </div>
+  </div>
+</section>
+
+<section >
+  <div id="Grab" class="Grab" >
+    <h2>Professionelle Grabpflege – Würdevoll und zuverlässig</h2>
+    <a>Die Pflege eines Grabes ist ein Zeichen der Wertschätzung und des Respekts </a></br>
+    <a>gegenüber den Verstorbenen. </a></br>
+    <a>Wir übernehmen für Sie die liebevolle und fachgerechte Grabpflege, </a></br>
+    <a>damit das Andenken an Ihre Angehörigen in Ehren gehalten wird. </a></br>
+    <div class="Grab1">
+      <img src="Grab/Grab1.jpg" alt="" height="200rem" max-width="auto">
+      <img src="Grab/Grab2.jpg" alt="" height="200rem" max-width="auto">
+      <img src="Grab/Grab3.jpg" alt="" height="200rem" max-width="auto">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="Grab2">
+    <h2>Unsere Leistungen bei der Grabpflege: </h2><br>
+    <li><p><a>Regelmäßige Reinigung: Wir entfernen Laub, Unkraut und Schmutz, sodass das Grab stets gepflegt und ordentlich aussieht.</a></br></li>
+    <li><p><a>Bepflanzung und Nachpflanzung: Saisonale Blumen, Stauden und Gräser kommen immer frisch und passend zur Jahreszeit auf das Grab.</a></br></li>
+    <li><p><a>Rückschnitte und Entfernung abgestorbener Pflanzenteile: Damit die Pflanzen gesund und attraktiv bleiben, übernehmen wir alle notwendigen Schnittmaßnahmen.</a></br></li>
+    <li><p><a>Individuelle Gestaltung: Auf Wunsch beraten wir Sie bei der Auswahl von Pflanzen und Dekorationen, die die Persönlichkeit des Verstorbenen widerspiegeln.</a></br></li>
+    <li><p><a>Saisonale Pflege: Ob Frühjahrsputz, Sommerpflege oder Vorbereitung auf den Winter – </br>Wir sind das ganze Jahr für Sie da.</a></br></li>
+    <p><a>Mit unserer zuverlässigen Grabpflege geben Sie Ihren Erinnerungen einen würdigen und 
+    gepflegten Rahmen. Kontaktieren Sie uns für individuelle Angebote und lassen Sie uns 
+    damit das Andenken an Ihre Angehörigen in Ehren gehalten wird. </a></a>
+    <div class="Grab21">
+      <img src="Grab/Grab4.jpg" alt="" height="200rem" max-width="auto">
+      <img src="Grab/Grab5.jpg" alt="" height="200rem" max-width="auto">
+    </div>
+  </div>
+</section>
+
+<section >
+  <div class="Pflanzung" id="Pflanzung">
+    <h2>Neupflanzungen von Sträuchern, Bäumen und Stauden</h2>
+    <p><a>Wir übernehmen fachgerechte Neupflanzungen von Sträuchern, Bäumen und Stauden, um Ihren Garten oder Außenbereich nachhaltig zu gestalten.</a></br>
+    <a>Dazu gehören die Auswahl geeigneter Pflanzen, die sorgfältige Vorbereitung des Bodens sowie das korrekte Einsetzen der Pflanzen.</a></br>
+    <a>Unser Ziel ist es, dass Ihre Neupflanzungen gesund anwachsen und langfristig gedeihen. </a>
+  </div>
+  <div class="Pflanz">
+    <img src="Pflanzung/Pflanzung1.jpg" alt="">
+    <img src="Pflanzung/Pflanzung2.jpg" alt="">
+  </div>
+</section>
+
+<section >
+  <div class="Vortrag" id="Vortrag">
+    <h2>Bildungsangebote und Wissenstransfer</h2>
+    <p><a>Uns liegt es am Herzen, Wissen über die Natur an junge Menschen weiterzugeben. In einer Welt, die immer digitaler wird, gerät die Bedeutung unserer natürlichen Umwelt oft in den Hintergrund – wir möchten dem bewusst etwas entgegensetzen.</a></br>
+    <a>Deshalb bieten wir Vorträge für Schulklassen an, in denen wir spannende Einblicke in verschiedene Naturthemen geben.</a></br>
+    <a>Dabei legen wir großen Wert darauf, die Inhalte altersgerecht und verständlich zu gestalten.</a></br>
+    <a>Jede Veranstaltung wird individuell vorbereitet, damit Kinder und Jugendliche Natur auf eine anschauliche und greifbare Weise erleben können.<br></a>
+  </div>
+  <div class="vor">
+    <img src="Vorträge/Boden das Fundament des Gärtners 1.png" alt="">
+  </div>
+</section>
+
+<div  class="Insta">
+<h2>Für mehr Information: <br> Folge mir auf Instagram</h2>
+ <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
+</a> </div>
+
+<div class="Instaf">
+<a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"> Folge mir auf Instagram</a>
+ <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
+</a> </div>
+ 
+
+
+
+
+<footer class="footer">
+   <nav>
+  <ul>
+        <a href="">Gerold Langenmayer <br> Moos 2 <br> 88260 Argenbühl <br> Tel.: 015755441802 <br></a>
+  
+         <a>© 2025 Lockenkopf. Alle Rechte vorbehalten.</a>
+        <br><a href="Kontakt.html">Kontakt</a>
+        <a href="Impressum.html">Impressum</a>
+  </ul> 
+
+   </nav>
+</footer>
+
+
+</body>
