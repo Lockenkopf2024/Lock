@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilder</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 97vw;
+   display: flex;
+    flex-direction: column;
+
+  /* display: block (Standard), kein grid */
+}
+
+ .menu {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  right: 35%;
+width: 30vw;
+height: 30vw;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover; 
+  padding: 1rem;
+  z-index: 100;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 80px rgba(221, 214, 50, 0.8);
+}
+.menu a {
+  font-size: 1.8rem;
+  line-height: 325%;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.8em 0.4em;
+  border-radius: 10%;
+  border: solid 5px rgba(221, 214, 50, 0.7);
+ text-decoration: none;
+ color: black;
+}
+.menu.show {
+  display: flex;
+}
+.Menü img {
+  cursor: pointer;
+  position: fixed;
+  width: 8vw;
+  height: auto;
+  z-index: 10;
+  left: 2%;
+  top: 2%;
+}
+
+/* Bilder*/
+.pic1 img{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+.Insta{
+
+    justify-content: center;
+  text-align: center;
+}
+.Insta h2{
+font-size: 50px;
+color: rgba(61, 89, 25, 1);
+line-height: 140%;
+
+}
+.Insta img{
+  cursor: pointer;
+width: 500px;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+   background: linear-gradient(to left,rgba(61, 89, 25,1) , rgb(255, 255, 255));
+
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+ 
+  width: 7vw;
+  height: auto;
+
+  z-index: 10;
+  top: 30%;
+  right: 90%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 18px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 7vw;
+  height: 6vw;
+  z-index: 10;
+  top: 18%;
+ right: 92%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.7);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+}
+.footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: rgb(255, 255, 255);
+  font-size: small;
+}
+html, body {
+    height: 100%;
+}
+.footer {
+    margin-top: 20%;
+    position: relative;
+    z-index: 999;
+    width: 100vw;
+}
+
+  </style>
+
+
+<body>
+
+<div class="Menü">
+  <img class="L" src="Leistungen1/Weitere/Menü2.svg" alt="Bild mit Menü" id="menuButton" />
+  <ul class="menu" id="menuList">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="Leistungen2.html">Leistungen</a></li>
+    <li><a href="Kontakt.html">Kontakt</a></li>
+    <li><a href="Infos.html">Infos</a></li>
+    <li><a href="Impressum.html">Impressum</a></li>
+
+  </ul>
+</div>
+
+<script>
+// Bestehender Code bleibt
+document.getElementById('menuButton').addEventListener('click', function () {
+  document.getElementById('menuList').classList.toggle('show');
+});
+
+// NEU: Klick außerhalb des Menüs schließt es
+document.addEventListener('click', function(event) {
+  const menuButton = document.getElementById('menuButton');
+  const menuList = document.getElementById('menuList');
+  
+  // Prüfe, ob Klick außerhalb von Menü-Button UND Menü-Liste war
+  if (!menuButton.contains(event.target) && !menuList.contains(event.target)) {
+    menuList.classList.remove('show');
+  }
+});
+    function toggleZoom(img) {
+      img.classList.toggle('zoomed');
+      
+      // Alle anderen Bilder zurücksetzen (optional)
+      document.querySelectorAll('.gallery img').forEach(otherImg => {
+        if (otherImg !== img) {
+          otherImg.classList.remove('zoomed');
+        }
+      });
+    }
+  </script>
+
+<div id="Leiste" class="pic1">
+        <img src="Leistungen2/pic1.svg" alt="">
+</div>
+
+
+<div  class="Insta">
+<h2>Für mehr Information: <br> Folge mir auf Instagram</h2>
+ <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
+</a> </div>
+
+<div class="Instaf">
+<a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"> Folge mir auf Instagram</a>
+ <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
+</a> </div>
+ 
+
+<footer class="footer">
+   <nav>
+  <ul>
+        <a href="">Gerold Langenmayer <br> Moos 2 <br> 88260 Argenbühl <br> Tel.: 015755441802 <br></a>
+  
+         <a>© 2025 Lockenkopf. Alle Rechte vorbehalten.</a>
+        <br><a href="Kontakt.html">Kontakt</a>
+        <a href="Impressum.html">Impressum</a>
+  </ul> 
+
+   </nav>
+</footer>
+
+</head>  
+</body>
+</html>

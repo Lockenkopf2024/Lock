@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+<style>
+   
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 97vw;
+   display: flex;
+    flex-direction: column;
+
+  /* display: block (Standard), kein grid */
+}
+
+ .menu {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  right: 35%;
+width: 30vw;
+height: 30vw;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover; 
+  padding: 1rem;
+  z-index: 100;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 80px rgba(221, 214, 50, 0.8);
+}
+.menu a {
+  font-size: 1.8rem;
+  line-height: 325%;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.8em 0.4em;
+  border-radius: 10%;
+  border: solid 5px rgba(221, 214, 50, 0.7);
+ text-decoration: none;
+ color: black;
+}
+.menu.show {
+  display: flex;
+}
+.Menü img {
+  cursor: pointer;
+  position: fixed;
+  width: 8vw;
+  height: auto;
+  z-index: 10;
+  left: 2%;
+  top: 2%;
+}
+
+/* Bilder*/
+.pic1 img{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+
+.Insta{
+ margin-top: 0%;
+
+    justify-content: center;
+  text-align: center;
+     background: linear-gradient(to left,rgba(61, 89, 25,1) , rgb(255, 255, 255));
+
+}
+.Insta h2{
+font-size: 50px;
+color: rgba(61, 89, 25, 1);
+line-height: 140%;
+
+}
+.Insta img{
+  cursor: pointer;
+width: 500px;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+   background: linear-gradient(to left,rgba(61, 89, 25,1) , rgb(255, 255, 255));
+
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+ 
+  width: 7vw;
+  height: auto;
+
+  z-index: 10;
+  top: 30%;
+  right: 90%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 18px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 7vw;
+  height: 6vw;
+  z-index: 10;
+  top: 18%;
+ right: 92%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.7);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+
+}
+.footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: rgb(255, 255, 255);
+  font-size: small;
+}
+html, body {
+    height: 100%;
+}
+.footer {
+    margin-top: 20%;
+    position: relative;
+    z-index: 999;
+    width: 100vw;
+}
+
+.Visite img{
+width: 80vw;
+height: auto;
+
+}
+.Visite{
+    position: relative;
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+   background: linear-gradient(to left,rgba(61, 89, 25,1) , rgb(255, 255, 255));
+
+}
+
+@media screen and (max-width: 768px) {
+body {
+margin: 0;
+  padding: 0;
+  min-height: 100vh; /* Höhe auf minimal Viewport-Höhe setzen für bessere Skalierung */
+  display: grid;
+  background-image: 
+    radial-gradient(circle at center,
+      rgba(255, 255, 255, 0.3) 85%,
+      rgba(221, 214, 50, 0.35) 90%,
+      rgba(61, 89, 25, 0.45) 95%,
+      rgba(120, 15, 15, 0.5) 99%),
+      url(Startseite/Bilder/Hint.png);
+     
+  background-repeat: no-repeat, no-repeat;
+  background-position: center center, center center;
+  background-size: cover, cover;
+
+}
+    .Menü img {
+    cursor: pointer;
+    position: fixed;
+    width: 25vw;
+    height: auto;
+    z-index: 10;
+  }
+
+  .menu {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 5%;
+  right: 0%;
+width: 80%;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover; 
+  padding: 1rem;
+  z-index: 100;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 80px rgba(221, 214, 50, 0.8);
+}
+.menu a {
+  font-size: 1.6rem;
+  line-height: 325%;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.8em 0.4em;
+  border-radius: 10%;
+  border: solid 5px rgba(221, 214, 50, 0.7);
+ text-decoration: none;
+ color: black;
+}
+
+.menu.show {
+  display: flex;
+}
+
+
+.Visite img{
+width: 90vw;
+height: auto;
+}
+.Visite{
+    position: relative;
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+top: 20vh;
+}
+
+.footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: white;
+  font-size: small;
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+  
+  width: 20vw;
+  height: auto;
+  z-index: 10;
+  top: 7%;
+  right: 1%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 10px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 15vw;
+  height: 10vw;
+  z-index: 10;
+  top: 0.5%;
+ right: 1%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.7);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+}
+.Insta{
+  margin-top: 35%;
+    justify-content: center;
+  text-align: center;
+}
+.Insta h2{
+font-size: 15px;
+color: rgba(61, 89, 25, 1);
+line-height: 140%;
+
+}
+.Insta img{
+  cursor: pointer;
+width: 300px;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+}
+a:hover img{
+    transform: scale(1.05); /* Leicht vergrößern */
+    transition: all 0.3s ease; /* Sanfter Übergang */
+}
+
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    display: grid;
+    gap: 10vw;
+    max-height: 90vh;
+    padding: 1rem;
+    background-repeat: repeat, repeat;
+    background-position: center center, center center;
+    background-size: cover, cover;
+  }
+
+  .menu a {
+    font-size: 1.8rem;
+    line-height: 225%;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 0.2em 0.4em;
+    border-radius: 10%;
+  }
+
+  .Menü img {
+    cursor: pointer;
+    position: fixed;
+    width: 15vw;
+    height: auto;
+    z-index: 10;
+  }
+
+  .menu {
+    display: none;
+    position: fixed;
+    width: 40vw;
+    height: 40vw;
+    top: 5%;
+    left: 0;
+    right: 0;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover;
+    padding: 1rem;
+    z-index: 100;
+    border-radius: 100%;
+    flex-direction: column;
+    transform: translateX(+60%);
+    align-items: center;
+    justify-content: center;
+  }
+  .Visite img{
+width: 85vw;
+height: auto;
+}
+.Visite{
+    position: relative;
+justify-content: center;
+text-align: center;
+margin: 0 auto;
+top: 5%;
+}
+.footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: white;
+  font-size: small;
+}
+.Insta{
+  margin-top: 5%;
+    justify-content: center;
+  text-align: center;
+}
+.Insta h2{
+font-size: 50px;
+color: rgba(61, 89, 25, 1);
+line-height: 140%;
+
+}
+
+.Insta img{
+  cursor: pointer;
+width: 300px;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+}
+a:hover img{
+    transform: scale(1.05); /* Leicht vergrößern */
+    transition: all 0.3s ease; /* Sanfter Übergang */
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+  
+  width: 7vw;
+  height: auto;
+  z-index: 10;
+  top: 15%;
+  right: 1%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 10px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 9vw;
+  height: 6vw;
+  z-index: 10;
+  top: 0.5%;
+ right: 1%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.7);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+}
+
+}
+  </style>
+<div id="Leiste" class="pic1">
+        <img src="Leistungen2/pic1.svg" alt="">
+</div>
+
+<body>
+ <div class="Visite">
+<img src="Kontakt/Bilder/Web visite.svg" alt="">
+ </div>
+
+
+<div class="Menü">
+  <img class="L" src="Leistungen1/Weitere/Menü2.svg" alt="Bild mit Menü" id="menuButton" />
+  <ul class="menu" id="menuList">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="Leistungen2.html">Leistungen</a></li>
+    <li><a href="Kontakt.html">Kontakt</a></li>
+    <li><a href="Infos.html">Infos</a></li>
+    <li><a href="Impressum.html">Impressum</a></li>
+
+  </ul>
+</div>
+
+<script>
+// Bestehender Code bleibt
+document.getElementById('menuButton').addEventListener('click', function () {
+  document.getElementById('menuList').classList.toggle('show');
+});
+
+// NEU: Klick außerhalb des Menüs schließt es
+document.addEventListener('click', function(event) {
+  const menuButton = document.getElementById('menuButton');
+  const menuList = document.getElementById('menuList');
+  
+  // Prüfe, ob Klick außerhalb von Menü-Button UND Menü-Liste war
+  if (!menuButton.contains(event.target) && !menuList.contains(event.target)) {
+    menuList.classList.remove('show');
+  }
+});
+
+  </script>
+
+<div  class="Insta">
+<h2>Für mehr Information: <br> Folge mir auf Instagram</h2>
+ <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
+</a> </div>
+
+<div class="Instaf">
+<a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"> Folge mir auf Instagram</a>
+ <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
+</a> </div>
+
+
+
+
+
+    <footer class="footer">
+   <nav>
+  <ul>
+        <a href="">Gerold Langenmayer <br> Moos 2 <br> 88260 Argenbühl <br> Tel.: 015755441802 <br></a>
+  
+         <a>© 2025 Lockenkopf. Alle Rechte vorbehalten.</a>
+        <br><a href="Kontakt.html">Kontakt</a>
+        <a href="Impressum.html">Impressum</a>
+  </ul> 
+
+   </nav>
+</footer>
+
+</head>  
+</body>
+</html>

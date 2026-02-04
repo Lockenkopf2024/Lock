@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leistungen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    
+
+<style>
+  
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 97vw;
+   display: flex;
+    flex-direction: column;
+
+  /* display: block (Standard), kein grid */
+}
+
+
+ .menu {
+  display: none;
+  position: fixed;
+  top: 10%;
+  left: 35%;
+  right: 35%;
+width: 30vw;
+height: 30vw;
+  background-color: rgba(255, 255, 255, 1);
+  background-image: url(Startseite/Bilder/Hint.png) ;
+  background-position: center center;
+  background-size: cover; 
+  padding: 1rem;
+  z-index: 100;
+  border-radius: 50%;
+  flex-direction: column;
+  align-items: center;
+  border: solid 2px rgba(255, 255, 255, 0.7);
+  box-shadow: 0px 0px 80px rgba(221, 214, 50, 0.8);
+}
+.menu a {
+  font-size: 1.8rem;
+  line-height: 325%;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 0.8em 0.4em;
+  border-radius: 10%;
+  border: solid 5px rgba(221, 214, 50, 0.7);
+ text-decoration: none;
+ color: black;
+}
+.menu.show {
+  display: flex;
+}
+.Menü img {
+  cursor: pointer;
+  position: fixed;
+  width: 8vw;
+  height: auto;
+  z-index: 10;
+  left: 2%;
+  top: 2%;
+}
+
+/* Bilder*/
+.pic1 img{
+    position: relative;
+    width: 100vw;
+    height: auto;
+}
+/*Gartenpflegebilder*/
+.Pfl img {
+  width: 15vw;
+}
+.Pfl {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+/*Schnitt*/
+.Schnitt img{
+    margin-top: -45%;
+    position: relative;
+    width: 30vw;
+    left: 52%;
+}
+/*Gräber*/
+.Grab1 {
+    position: relative;
+    margin-top: -35%;
+    text-align: left;
+    left: 10%; 
+}
+.Grab1 img{
+    width: 15vw;
+    height: auto;
+}
+
+/*Pflanzungen*/
+
+.Pflanz img{
+    transform: rotate(-90deg);
+    width: 28vw;
+
+}
+
+/*Vortrag*/
+.vor img{
+width: 50vw;
+  border: 5px solid rgba(120, 15, 15, 0.5);
+  background-color: rgba(61, 89, 25, 0.45);
+  box-shadow: 5px 6px 4px rgba(221, 214, 50, 0.7);
+}
+.vor{
+    position: relative;
+
+    text-align: left;
+    margin-top: -43%;
+    left: 3%;
+
+  
+
+ 
+}
+/*Navigationsleiste*/
+.LeistungenS{
+  position: fixed;
+  top: 1%;
+ width: 99%;
+ height: 1.5vw;
+  display: flex;                /* Flexbox aktivieren */
+ /*  flex-wrap: nowrap;            Zeilenumbruch vermeiden, alles in einer Zeile */
+  justify-content:center;     /* Elemente horizontal mittig ausrichten */
+ text-align: center;
+               /* Abstand zwischen den Elementen */
+ 
+  font-size: 20px;
+  z-index: 15;
+ color: rgba(120, 15, 15, 0.8);
+  background-color: rgba(255, 255, 255, 1);
+border-radius: 10px;
+ background: linear-gradient(to left,rgba(61, 89, 25,0.1) , rgb(255, 255, 255));
+}
+.LeistungenS a{
+text-decoration: none;
+color: black;
+margin-left: 4%;
+
+}
+
+/* Gartenpflege Punkt1*/
+.Gartenpflege{
+
+      position: relative;
+  margin-top: -1%;
+  width: 100vw;
+  min-height: auto;
+  max-width: 100%;
+
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  justify-content: center;
+   background: linear-gradient(to left,rgba(61, 89, 25,1) , rgb(255, 255, 255));
+
+}
+.Gartenpflege a{
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+.Gartenpflege h2{
+    font-size: 40px;
+        background-color: rgba(255, 255, 255, 0.5);
+
+}
+.Gartenpflege h1{
+    font-size: 25px;
+        background-color: rgba(255, 255, 255, 0.5);
+
+}
+.Kontakt {
+    margin-top: 5%;
+margin-bottom: 5%; }
+.Kontakt a{ 
+    
+    font-size: 28px;
+    padding: 8px;
+
+    text-decoration: none;
+         border: 5px solid rgba(120, 15, 15, 0.8);
+         border-radius: 20px;
+
+    color: rgba(61, 89, 25,1);
+    background-color: rgba(255, 255, 255, 1);
+}
+ /*Schnitt Punkt2*/
+ .Schnitt1 {
+      text-align: left;     /* rechtsbündig */
+    margin-top: 25%;
+ }
+/*Gräber Punkt3*/
+.Grab{
+    position: relative;
+    text-align: right;
+    right: 10%;
+    margin-top: 10%;
+}
+.Pflanzung .Kontakt{
+    position: relative;
+    text-align: right;
+   left: 37%;
+    transform: rotate(90deg);
+    margin-top: -22%;
+   
+}
+
+.Vortrag{
+    position: relative;
+    text-align: right;
+    justify-content: right;
+    right: 8%;
+    margin-top: -15%;
+}
+
+.Insta{
+ margin-top: 0%;
+
+    justify-content: center;
+  text-align: center;
+     background: linear-gradient(to left,rgba(61, 89, 25,1) , rgb(255, 255, 255));
+
+}
+.Insta h2{
+font-size: 50px;
+color: rgba(61, 89, 25, 1);
+line-height: 140%;
+
+}
+.Insta img{
+  cursor: pointer;
+width: 500px;
+height: auto;
+background-color: rgba(255, 255, 255, 0.45);
+   background: linear-gradient(to left,rgba(61, 89, 25,1) , rgb(255, 255, 255));
+
+}
+.Instaf img{
+  cursor: pointer;
+  position: fixed;
+ 
+  width: 7vw;
+  height: auto;
+
+  z-index: 10;
+  top: 30%;
+  right: 90%;
+   padding: 10px;
+     background-color: rgba(255, 255, 255, 1);
+border-radius: 50%;
+
+    box-shadow: 
+        /* Erster Schatten: Gelb, oben */
+        10px 0px 20px rgba(255, 255, 255, 1),
+        /* Zweiter Schatten: Rot, unten */
+        0 10px 20px rgba(120, 15, 15, 0.6);
+}
+.Instaf a{
+  text-decoration: none;
+  font-size: 18px;
+  color: rgba(61, 89, 25, 1);
+}
+.Instaf{
+
+  position: fixed;
+  justify-content: center;
+  text-align: center;
+  width: 7vw;
+  height: 6vw;
+  z-index: 10;
+  top: 18%;
+ right: 92%;
+   padding: 10px;
+   padding-top: 2%;
+     background-color: rgba(221, 214, 50, 0.7);
+border-radius: 50%;
+box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
+
+}
+
+.footer {
+    background-color: #333;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+.footer a{
+  color: rgb(255, 255, 255);
+  font-size: small;
+}
+
+html, body {
+    height: 100%;
+}
+
+.footer {
+    margin-top: 20%;
+    position: relative;
+    z-index: 999;
+    width: 100vw;
+}
+
+    </style>
+
+</head>
+<body>
+
+
+
+<div class="Menü">
+  <img class="L" src="Leistungen1/Weitere/Menü2.svg" alt="Bild mit Menü" id="menuButton" />
+  <ul class="menu" id="menuList">
+    <li><a href="index.html">Startseite</a></li>
+    <li><a href="Leistungen.html">Leistungen</a></li>
+    <li><a href="Kontakt.html">Kontakt</a></li>
+    <li><a href="Infos.html">Infos</a></li>
+    <li><a href="Impressum.html">Impressum</a></li>
+
+  </ul>
+</div>
+
+
+
+
+<div id="Leiste" class="pic1">
+        <img src="Leistungen2/pic1.svg" alt="">
+</div>
+
+
+
+<div class="LeistungenS">
+<a href="#Leiste" >Leistungen</a></h2>
+<p></p><a href="#Gartenpflege">Gartenpflege</a>
+<p></p><a href="#Schnitt"> Schnittarbeiten</a>
+<p></p><a href="#Grab">Grabpflege</a>
+<p></p><a href="#Pflanzung">Neupflanzungen</a>
+<p></p><a href="#Vortrag"> Wissenstransfer</a>
+</div>
+
+
+ <div id="Gartenpflege" class="Gartenpflege">
+    <h2>Gartenpflege</h2>
+    <h1>Wir sorgen für: </h1></br>
+    <p><a>ein gesundes Wachstum, </a></br>
+    <p><a>eine attraktive Gestaltung </a></br>
+    <p><a>und eine nachhaltige Pflege Ihrer Pflanzenwelt.</a></br>
+        <div class="Kontakt">
+        <p><a href="Kontakt.html">   Jetzt Kontaktieren   </a></p>
+        </div>
+                  <div class="Pfl">
+                     <img src="Pflege/god.jpg" alt="">
+                    <img src="Pflege/Pfl.jpg" alt="">
+                    <img src="Pflege/Ull.jpg" alt="">
+                   </div>
+
+  <div id="Schnitt" class="Schnitt1" >
+    <h2>Rückschnitt und Schnittarbeiten</h2><br>
+    <a>Ob Obstbaum-, Heckenschnitt – </a>
+    <a>oder Formschnitt bei Sträuchern</a></p>
+    <a>wir führen alle Arbeiten fachgerecht aus. </a></br>
+   
+             <div class="Kontakt">
+            <p><a href="Kontakt.html">Jetzt Kontaktieren</a></p>
+            </div>
+   
+                     <div class="Schnitt">
+                     <img src="Schnitt/Hoch.jpeg" alt="Bild1" >
+                     </div>
+  </div>
+
+
+  <div id="Grab" class="Grab" >
+    <h2>Professionelle Grabpflege – Würdevoll und zuverlässig</h2>
+    <br><br><br>
+    <a>Die Pflege eines Grabes ist ein Zeichen <br>der Wertschätzung und des Respekts </a></br>
+    <a>gegenüber den Verstorbenen. </a></br>
+   <br> <a>Wir übernehmen für Sie die liebevolle <br>und fachgerechte Grabpflege, </a></br>
+    <a>damit das Andenken <br> an Ihre Angehörigen <br>in Ehren gehalten <br>wird. </a></br>
+            
+            <div class="Kontakt">
+             <p><a href="Kontakt.html">Kontaktieren Sie uns für individuelle Angebote</a></p>
+            </div>
+
+                     <div class="Grab1">
+                      <img src="Grab/Grab1.jpg" alt="" height="200rem" max-width="auto">
+                    <img src="Grab/Grab2.jpg" alt="" height="200rem" max-width="auto">
+                    <img src="Grab/Grab3.jpg" alt="" height="200rem" max-width="auto">
+                    </div>
+                    </div>
+
+    <div class="Pflanzung" id="Pflanzung">
+        <h2>Neupflanzungen von Sträuchern, Bäumen und Stauden</h2>
+        <p><a>Wir übernehmen fachgerechte Neupflanzungen.</a></br>
+        <a>Dazu gehören die Auswahl geeigneter Pflanzen, <br> die sorgfältige Vorbereitung des Bodens sowie das korrekte Einsetzen der Pflanzen.</a></br>
+        <a>Unser Ziel ist es, dass Ihre Neupflanzungen gesund anwachsen und langfristig gedeihen. </a>
+
+             <div class="Kontakt">
+             <p><a href="Kontakt.html">Kontaktieren Sie uns für individuelle Angebote</a></p>
+            </div>
+             </div>
+                       <div class="Pflanz">
+                      <img src="Pflanzung/Pflanzung2.jpg" alt="">
+                       </div>
+
+<div class="Vortrag" id="Vortrag">
+    <h2>Bildungsangebote und Wissenstransfer</h2>
+    <p><a>Uns liegt es am Herzen, <br> Wissen über die Natur an junge Menschen weiterzugeben. 
+        <br> In einer Welt, die immer digitaler wird,
+         <br> gerät die Bedeutung unserer natürlichen Umwelt 
+         <br> oft in den Hintergrund 
+        <br>– wir möchten dem bewusst etwas entgegensetzen.</a></br>
+    <a>Deshalb bieten wir Vorträge <br> für Gruppen/Schulklassen an,
+         <br> in denen wir spannende Einblicke <br> in verschiedene Naturthemen geben.</a></br>
+    <a>Dabei legen wir großen Wert darauf, <br>die Inhalte altersgerecht und verständlich zu gestalten.</a></br>
+  <br><br><br>  <a>Jede Veranstaltung wird individuell vorbereitet, <br> damit Kinder und Jugendliche sowie Erwachsene
+     <br> Natur auf eine anschauliche <br> und greifbare Weise erleben können.<br></a>
+</div>
+
+             <div class="Kontakt">
+             <p><a href="Kontakt.html">Kontaktieren Sie uns um näheres zu erfahren</a></p>
+            </div>
+             </div>
+
+               <div class="vor">
+               <img src="Vorträge/Boden das Fundament des Gärtners 1.png" alt="">
+              </div>
+
+
+<div  class="Insta">
+<h2>Für mehr Information: <br> Folge mir auf Instagram</h2>
+ <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
+</a> </div>
+
+<div class="Instaf">
+<a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"> Folge mir auf Instagram</a>
+ <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
+</a> </div>
+
+
+<footer class="footer">
+   <nav>
+  <ul>
+        <a href="">Gerold Langenmayer <br> Moos 2 <br> 88260 Argenbühl <br> Tel.: 015755441802 <br></a>
+  
+         <a>© 2025 Lockenkopf. Alle Rechte vorbehalten.</a>
+        <br><a href="Kontakt.html">Kontakt</a>
+        <a href="Impressum.html">Impressum</a>
+  </ul> 
+
+   </nav>
+</footer>
+<script>
+// Bestehender Code bleibt
+document.getElementById('menuButton').addEventListener('click', function () {
+  document.getElementById('menuList').classList.toggle('show');
+});
+
+// NEU: Klick außerhalb des Menüs schließt es
+document.addEventListener('click', function(event) {
+  const menuButton = document.getElementById('menuButton');
+  const menuList = document.getElementById('menuList');
+  
+  // Prüfe, ob Klick außerhalb von Menü-Button UND Menü-Liste war
+  if (!menuButton.contains(event.target) && !menuList.contains(event.target)) {
+    menuList.classList.remove('show');
+  }
+})
+  </script>
+</body>
+
+</html>
