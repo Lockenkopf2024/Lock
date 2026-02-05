@@ -3,523 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <!-- SEO WICHTIG! -->
+    <title>Kontakt - Gerold Langenmayer Gartenpflege Argenbühl</title>
+    <meta name="description" content="Kontaktieren Sie Gerold Langenmayer für professionelle Gartenpflege in Argenbühl und Umgebung. Telefon, E-Mail, Instagram.">
+    <meta name="keywords" content="Gartenpflege Kontakt Argenbühl, Gärtner Telefon, Grabpflege Anfrage">
+    <meta name="author" content="Gerold Langenmayer">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Kontakt - Gerold Langenmayer Gartenpflege">
+    <meta property="og:description" content="Professionelle Gartenpflege - Kontaktieren Sie uns!">
+    <meta property="og:type" content="website">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
-<style>
-   
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  max-width: 97vw;
-   display: flex;
-    flex-direction: column;
-
-  /* display: block (Standard), kein grid */
-}
-
- .menu {
-  display: none;
-  position: fixed;
-  top: 10%;
-  left: 35%;
-  right: 35%;
-width: 30vw;
-height: 30vw;
-  background-color: rgba(255, 255, 255, 1);
-  background-image: url(Startseite/Bilder/Hint.png) ;
-  background-position: center center;
-  background-size: cover; 
-  padding: 1rem;
-  z-index: 100;
-  border-radius: 50%;
-  flex-direction: column;
-  align-items: center;
-  border: solid 2px rgba(255, 255, 255, 0.7);
-  box-shadow: 0px 0px 80px rgba(221, 214, 50, 0.8);
-}
-.menu a {
-  font-size: 1.8rem;
-  line-height: 325%;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 0.8em 0.4em;
-  border-radius: 10%;
-  border: solid 5px rgba(221, 214, 50, 0.7);
- text-decoration: none;
- color: black;
-}
-.menu.show {
-  display: flex;
-}
-.Menü img {
-  cursor: pointer;
-  position: fixed;
-  width: 8vw;
-  height: auto;
-  z-index: 10;
-  left: 2%;
-  top: 2%;
-}
-
-/* Bilder*/
-.pic1 img{
-    position: relative;
-    width: 100vw;
-    height: auto;
-}
-
-.Insta{
- margin-top: 0%;
-
-    justify-content: center;
-  text-align: center;
-     background: linear-gradient(to left,rgba(61, 89, 25,1) , rgb(255, 255, 255));
-
-}
-.Insta h2{
-font-size: 50px;
-color: rgba(61, 89, 25, 1);
-line-height: 140%;
-
-}
-.Insta img{
-  cursor: pointer;
-width: 500px;
-height: auto;
-background-color: rgba(255, 255, 255, 0.45);
-   background: linear-gradient(to left,rgba(61, 89, 25,1) , rgb(255, 255, 255));
-
-}
-.Instaf img{
-  cursor: pointer;
-  position: fixed;
- 
-  width: 7vw;
-  height: auto;
-
-  z-index: 10;
-  top: 30%;
-  right: 90%;
-   padding: 10px;
-     background-color: rgba(255, 255, 255, 1);
-border-radius: 50%;
-
-    box-shadow: 
-        /* Erster Schatten: Gelb, oben */
-        10px 0px 20px rgba(255, 255, 255, 1),
-        /* Zweiter Schatten: Rot, unten */
-        0 10px 20px rgba(120, 15, 15, 0.6);
-}
-.Instaf a{
-  text-decoration: none;
-  font-size: 18px;
-  color: rgba(61, 89, 25, 1);
-}
-.Instaf{
-
-  position: fixed;
-  justify-content: center;
-  text-align: center;
-  width: 7vw;
-  height: 6vw;
-  z-index: 10;
-  top: 18%;
- right: 92%;
-   padding: 10px;
-   padding-top: 2%;
-     background-color: rgba(221, 214, 50, 0.7);
-border-radius: 50%;
-box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
-
-}
-.footer {
-    background-color: #333;      /* Dunkler Hintergrund */
-    color: white;                /* Weißer Text */
-    text-align: center;          /* Zentrierter Text */
-    padding: 20px 0;             /* Innenabstände oben/unten */
-    margin-top: auto;            /* Automatischer Abstand oben */
-}
-.footer a{
-  color: rgb(255, 255, 255);
-  font-size: small;
-}
-html, body {
-    height: 100%;
-}
-.footer {
-    margin-top: 20%;
-    position: relative;
-    z-index: 999;
-    width: 100vw;
-}
-
-.Visite img{
-width: 80vw;
-height: auto;
-
-}
-.Visite{
-    position: relative;
-justify-content: center;
-text-align: center;
-margin: 0 auto;
-   background: linear-gradient(to left,rgba(61, 89, 25,1) , rgb(255, 255, 255));
-
-}
-
-@media screen and (max-width: 768px) {
-body {
-margin: 0;
-  padding: 0;
-  min-height: 100vh; /* Höhe auf minimal Viewport-Höhe setzen für bessere Skalierung */
-  display: grid;
-  background-image: 
-    radial-gradient(circle at center,
-      rgba(255, 255, 255, 0.3) 85%,
-      rgba(221, 214, 50, 0.35) 90%,
-      rgba(61, 89, 25, 0.45) 95%,
-      rgba(120, 15, 15, 0.5) 99%),
-      url(Startseite/Bilder/Hint.png);
-     
-  background-repeat: no-repeat, no-repeat;
-  background-position: center center, center center;
-  background-size: cover, cover;
-
-}
-    .Menü img {
-    cursor: pointer;
-    position: fixed;
-    width: 25vw;
-    height: auto;
-    z-index: 10;
-  }
-
-  .menu {
-  display: none;
-  position: fixed;
-  top: 10%;
-  left: 5%;
-  right: 0%;
-width: 80%;
-  background-color: rgba(255, 255, 255, 1);
-  background-image: url(Startseite/Bilder/Hint.png) ;
-  background-position: center center;
-  background-size: cover; 
-  padding: 1rem;
-  z-index: 100;
-  border-radius: 50%;
-  flex-direction: column;
-  align-items: center;
-  border: solid 2px rgba(255, 255, 255, 0.7);
-  box-shadow: 0px 0px 80px rgba(221, 214, 50, 0.8);
-}
-.menu a {
-  font-size: 1.6rem;
-  line-height: 325%;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 0.8em 0.4em;
-  border-radius: 10%;
-  border: solid 5px rgba(221, 214, 50, 0.7);
- text-decoration: none;
- color: black;
-}
-
-.menu.show {
-  display: flex;
-}
-
-
-.Visite img{
-width: 90vw;
-height: auto;
-}
-.Visite{
-    position: relative;
-justify-content: center;
-text-align: center;
-margin: 0 auto;
-top: 20vh;
-}
-
-.footer {
-    background-color: #333;      /* Dunkler Hintergrund */
-    color: white;                /* Weißer Text */
-    text-align: center;          /* Zentrierter Text */
-    padding: 20px 0;             /* Innenabstände oben/unten */
-    margin-top: auto;            /* Automatischer Abstand oben */
-}
-.footer a{
-  color: white;
-  font-size: small;
-}
-.Instaf img{
-  cursor: pointer;
-  position: fixed;
-  
-  width: 20vw;
-  height: auto;
-  z-index: 10;
-  top: 7%;
-  right: 1%;
-   padding: 10px;
-     background-color: rgba(255, 255, 255, 1);
-border-radius: 50%;
-
-    box-shadow: 
-        /* Erster Schatten: Gelb, oben */
-        10px 0px 20px rgba(255, 255, 255, 1),
-        /* Zweiter Schatten: Rot, unten */
-        0 10px 20px rgba(120, 15, 15, 0.6);
-}
-.Instaf a{
-  text-decoration: none;
-  font-size: 10px;
-  color: rgba(61, 89, 25, 1);
-}
-.Instaf{
-
-  position: fixed;
-  justify-content: center;
-  text-align: center;
-  width: 15vw;
-  height: 10vw;
-  z-index: 10;
-  top: 0.5%;
- right: 1%;
-   padding: 10px;
-   padding-top: 2%;
-     background-color: rgba(221, 214, 50, 0.7);
-border-radius: 50%;
-box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
-}
-.Insta{
-  margin-top: 35%;
-    justify-content: center;
-  text-align: center;
-}
-.Insta h2{
-font-size: 15px;
-color: rgba(61, 89, 25, 1);
-line-height: 140%;
-
-}
-.Insta img{
-  cursor: pointer;
-width: 300px;
-height: auto;
-background-color: rgba(255, 255, 255, 0.45);
-}
-a:hover img{
-    transform: scale(1.05); /* Leicht vergrößern */
-    transition: all 0.3s ease; /* Sanfter Übergang */
-}
-
-}
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  body {
-    display: grid;
-    gap: 10vw;
-    max-height: 90vh;
-    padding: 1rem;
-    background-repeat: repeat, repeat;
-    background-position: center center, center center;
-    background-size: cover, cover;
-  }
-
-  .menu a {
-    font-size: 1.8rem;
-    line-height: 225%;
-    background-color: rgba(255, 255, 255, 1);
-    padding: 0.2em 0.4em;
-    border-radius: 10%;
-  }
-
-  .Menü img {
-    cursor: pointer;
-    position: fixed;
-    width: 15vw;
-    height: auto;
-    z-index: 10;
-  }
-
-  .menu {
-    display: none;
-    position: fixed;
-    width: 40vw;
-    height: 40vw;
-    top: 5%;
-    left: 0;
-    right: 0;
-  background-color: rgba(255, 255, 255, 1);
-  background-image: url(Startseite/Bilder/Hint.png) ;
-  background-position: center center;
-  background-size: cover;
-    padding: 1rem;
-    z-index: 100;
-    border-radius: 100%;
-    flex-direction: column;
-    transform: translateX(+60%);
-    align-items: center;
-    justify-content: center;
-  }
-  .Visite img{
-width: 85vw;
-height: auto;
-}
-.Visite{
-    position: relative;
-justify-content: center;
-text-align: center;
-margin: 0 auto;
-top: 5%;
-}
-.footer {
-    background-color: #333;      /* Dunkler Hintergrund */
-    color: white;                /* Weißer Text */
-    text-align: center;          /* Zentrierter Text */
-    padding: 20px 0;             /* Innenabstände oben/unten */
-    margin-top: auto;            /* Automatischer Abstand oben */
-}
-.footer a{
-  color: white;
-  font-size: small;
-}
-.Insta{
-  margin-top: 5%;
-    justify-content: center;
-  text-align: center;
-}
-.Insta h2{
-font-size: 50px;
-color: rgba(61, 89, 25, 1);
-line-height: 140%;
-
-}
-
-.Insta img{
-  cursor: pointer;
-width: 300px;
-height: auto;
-background-color: rgba(255, 255, 255, 0.45);
-}
-a:hover img{
-    transform: scale(1.05); /* Leicht vergrößern */
-    transition: all 0.3s ease; /* Sanfter Übergang */
-}
-.Instaf img{
-  cursor: pointer;
-  position: fixed;
-  
-  width: 7vw;
-  height: auto;
-  z-index: 10;
-  top: 15%;
-  right: 1%;
-   padding: 10px;
-     background-color: rgba(255, 255, 255, 1);
-border-radius: 50%;
-
-    box-shadow: 
-        /* Erster Schatten: Gelb, oben */
-        10px 0px 20px rgba(255, 255, 255, 1),
-        /* Zweiter Schatten: Rot, unten */
-        0 10px 20px rgba(120, 15, 15, 0.6);
-}
-.Instaf a{
-  text-decoration: none;
-  font-size: 10px;
-  color: rgba(61, 89, 25, 1);
-}
-.Instaf{
-
-  position: fixed;
-  justify-content: center;
-  text-align: center;
-  width: 9vw;
-  height: 6vw;
-  z-index: 10;
-  top: 0.5%;
- right: 1%;
-   padding: 10px;
-   padding-top: 2%;
-     background-color: rgba(221, 214, 50, 0.7);
-border-radius: 50%;
-box-shadow: 2px 5px 10px rgba(120, 15, 15, 0.5);
-}
-
-}
-  </style>
-<div id="Leiste" class="pic1">
-        <img src="Leistungen2/pic1.svg" alt="">
-</div>
+</head>
 
 <body>
- <div class="Visite">
-<img src="Kontakt/Bilder/Web visite.svg" alt="">
- </div>
+    <!-- BILD -->
+    <div id="Leiste" class="pic1">
+        <img src="Leistungen2/pic1.svg" alt="Kontakt">
+    </div>
 
+    <!-- HAMBURGER FIX AM LINKEN RAND -->
+    <div class="Menü">
+        <img class="L" src="Leistungen1/Weitere/Menü2.svg" id="menuButton" alt="Menü">
+        <ul class="menu" id="menuList">
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="Leistungen2.html">Leistungen</a></li>
+            <li><a href="Kontakt.html">Kontakt</a></li>
+            <li><a href="Infos.html">Infos</a></li>
+            <li><a href="Impressum.html">Impressum</a></li>
+        </ul>
+    </div>
 
-<div class="Menü">
-  <img class="L" src="Leistungen1/Weitere/Menü2.svg" alt="Bild mit Menü" id="menuButton" />
-  <ul class="menu" id="menuList">
-    <li><a href="index.html">Startseite</a></li>
-    <li><a href="Leistungen2.html">Leistungen</a></li>
-    <li><a href="Kontakt.html">Kontakt</a></li>
-    <li><a href="Infos.html">Infos</a></li>
-    <li><a href="Impressum.html">Impressum</a></li>
+    <!-- INSTAGRAM BUTTON FIX AM LINKEN RAND -->
+    <div class="Instaf">
+        <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/">Instagram</a>
+        <img src="Kontakt/Bilder/Instagram.png" alt="Instagram">
+    </div>
 
-  </ul>
-</div>
+    <!-- VISITENKARTE -->
+    <div class="Visite">
+        <img src="Kontakt/Bilder/Web visite.svg" alt="Kontakt Visitenkarte">
+    </div>
+
+    <!-- INSTAGRAM ÜBERSCHRIFT -->
+    <div class="Insta">
+        <h2>Für mehr Information:<br>Folge mir auf Instagram</h2>
+        <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/">
+            <img src="Kontakt/Bilder/Instagram.png" alt="Instagram">
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>Gerold Langenmayer • Moos 2 • 88260 Argenbühl • 0157 55441802<br>
+        © 2026 Lockenkopf. Alle Rechte vorbehalten.</p>
+        <p><a href="Kontakt.html">Kontakt</a> | <a href="Impressum.html">Impressum</a></p>
+    </footer>
+
+<style>
+/* BASE STYLES */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    min-height: 100vh; 
+    font-family: 'Open Sans', sans-serif; 
+    display: flex; 
+    flex-direction: column; 
+    background: radial-gradient(circle at center, rgba(255,255,255,0.4) 0%, rgba(221,214,50,0.3) 50%, rgba(61,89,25,0.6) 100%);
+}
+
+/* BILD */
+.pic1 img { width: 100%; height: auto; display: block; }
+
+/* MENÜ-ICON FIX AM LINKEN RAND */
+.Menü { position: fixed; top: clamp(80px, 8vh, 110px); left: clamp(1.5rem, 4vw, 3rem); z-index: 1001; }
+.Menü img { 
+    width: clamp(70px, 16vw, 130px); height: auto; cursor: pointer; border-radius: 50%; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4); transition: all 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.Menü img:hover { transform: scale(1.1) rotate(10deg); box-shadow: 0 15px 40px rgba(221,214,50,0.6); }
+
+/* MENU OVERLAY */
+.menu {
+    display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: clamp(300px, 85vw, 600px); height: clamp(300px, 85vw, 600px); max-height: 90vh; z-index: 1000;
+    background: rgba(255,255,255,0.98); border-radius: 50%; flex-direction: column; justify-content: center; 
+    align-items: center; gap: clamp(1.2rem, 4vw, 2rem); box-shadow: 0 25px 70px rgba(0,0,0,0.5); overflow-y: auto;
+}
+.menu.show { display: flex; }
+.menu a {
+    padding: clamp(1rem, 3.5vw, 1.8rem) clamp(2rem, 7vw, 3.5rem); background: white; border: 4px solid #DDD632; 
+    border-radius: 30px; text-decoration: none; color: black; font-size: clamp(1.2rem, 5vw, 1.8rem); 
+    font-weight: 600; white-space: nowrap; box-shadow: 0 8px 25px rgba(0,0,0,0.2); transition: all 0.3s ease;
+}
+.menu a:hover { transform: translateY(-4px); box-shadow: 0 15px 40px rgba(221,214,50,0.4); }
+
+/* INSTAGRAM BUTTON FIX AM LINKEN RAND */
+.Instaf {
+    position: fixed; top: clamp(200px, 20vh, 280px); left: clamp(1.5rem, 4vw, 3rem);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    width: clamp(85px, 20vw, 140px); padding: clamp(1rem, 3vw, 1.4rem);
+    background: linear-gradient(135deg, #DDD632, #3D5919); border-radius: 999px;
+    box-shadow: 0 12px 35px rgba(120,15,15,0.5); z-index: 1001; transition: all 0.3s ease;
+}
+.Instaf:hover { transform: translateY(-3px); box-shadow: 0 18px 45px rgba(120,15,15,0.6); }
+.Instaf a { font-size: clamp(0.95rem, 3.5vw, 1.25rem); color: white; text-decoration: none; font-weight: 600; }
+.Instaf img { width: clamp(30px, 7.5vw, 45px); height: auto; }
+
+/* VISITENKARTE */
+.Visite {
+    padding: clamp(3rem, 8vw, 6rem); max-width: clamp(90vw, 95vw, 800px); margin: clamp(4rem, 10vw, 6rem) auto clamp(2rem, 6vw, 4rem) auto;
+    text-align: center; background: linear-gradient(135deg, rgba(61,89,25,0.9), rgba(255,255,255,0.95)); 
+    border-radius: 30px; box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+}
+.Visite img { 
+    width: clamp(300px, 85vw, 650px); 
+    height: auto; 
+    border-radius: 25px; 
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3); 
+}
+
+/* INSTAGRAM ÜBERSCHRIFT */
+.Insta {
+    text-align: center; background: linear-gradient(135deg, rgba(61,89,25,0.95), rgba(255,255,255,0.98));
+    padding: clamp(3rem, 8vw, 6rem); margin: clamp(3rem, 8vw, 5rem) auto; max-width: clamp(90vw, 95vw, 900px);
+    border-radius: 35px; box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+}
+.Insta h2 { 
+    font-size: clamp(2.2rem, 7vw, 4.5rem); 
+    color: #3D5919; 
+    margin-bottom: 2.5rem; 
+    line-height: 1.3; 
+    background: rgba(255,255,255,0.6); 
+    padding: clamp(1rem, 3vw, 1.5rem); 
+    border-radius: 20px; 
+    display: inline-block;
+    font-weight: 700;
+}
+.Insta img { 
+    width: clamp(300px, 80vw, 600px); 
+    height: auto; 
+    border-radius: 30px; 
+    box-shadow: 0 25px 60px rgba(0,0,0,0.35); 
+    transition: all 0.3s ease; 
+}
+.Insta a:hover img { transform: scale(1.05); }
+
+/* FOOTER */
+footer { 
+    margin-top: auto; 
+    background: rgba(51,51,51,0.98); 
+    color: white; 
+    text-align: center; 
+    padding: clamp(2.5rem, 6vw, 4rem); 
+    box-shadow: 0 -15px 50px rgba(0,0,0,0.3); 
+}
+footer p { font-size: clamp(1rem, 2.5vw, 1.2rem); line-height: 1.7; margin-bottom: 1rem; }
+footer a { color: white; text-decoration: none; font-weight: 500; }
+footer a:hover { color: #DDD632; }
+
+/* MEDIA QUERIES */
+@media (min-width: 768px) {
+    .Menü { top: clamp(100px, 10vh, 130px); }
+    .Instaf { top: clamp(240px, 24vh, 340px); }
+    .Menü img { width: clamp(75px, 12vw, 100px); }
+    .Instaf { width: clamp(85px, 15vw, 130px); }
+}
+
+@media (min-width: 1024px) {
+    .Menü { top: clamp(110px, 9vh, 140px); left: clamp(2.5rem, 5vw, 4rem); }
+    .Instaf { top: clamp(280px, 28vh, 420px); left: clamp(2.5rem, 5vw, 4rem); }
+    .Menü img { width: clamp(85px, 8vw, 110px); }
+    .Instaf {
+        flex-direction: row; width: clamp(160px, 12vw, 220px); height: 90px; border-radius: 45px; gap: 1rem;
+    }
+    .Instaf img { width: clamp(35px, 5vw, 48px); }
+    .Instaf a { font-size: clamp(1rem, 2.5vw, 1.15rem); }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .Menü { top: clamp(70px, 7vh, 90px); }
+    .Instaf { top: clamp(180px, 18vh, 260px); }
+    .Visite { margin-top: clamp(2rem, 6vw, 4rem); }
+    .Insta { margin-top: clamp(2rem, 6vw, 4rem); }
+}
+</style>
 
 <script>
-// Bestehender Code bleibt
-document.getElementById('menuButton').addEventListener('click', function () {
-  document.getElementById('menuList').classList.toggle('show');
+document.getElementById('menuButton').addEventListener('click', e => {
+    e.stopPropagation();
+    document.getElementById('menuList').classList.toggle('show');
 });
-
-// NEU: Klick außerhalb des Menüs schließt es
-document.addEventListener('click', function(event) {
-  const menuButton = document.getElementById('menuButton');
-  const menuList = document.getElementById('menuList');
-  
-  // Prüfe, ob Klick außerhalb von Menü-Button UND Menü-Liste war
-  if (!menuButton.contains(event.target) && !menuList.contains(event.target)) {
-    menuList.classList.remove('show');
-  }
+document.addEventListener('click', () => {
+    document.getElementById('menuList').classList.remove('show');
 });
+</script>
 
-  </script>
-
-<div  class="Insta">
-<h2>Für mehr Information: <br> Folge mir auf Instagram</h2>
- <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
-</a> </div>
-
-<div class="Instaf">
-<a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"> Folge mir auf Instagram</a>
- <a target="_blank" href="https://www.instagram.com/lockenkopf_gl/"><img  src="Kontakt/Bilder/Instagram.png" alt="">
-</a> </div>
-
-
-
-
-
-    <footer class="footer">
-   <nav>
-  <ul>
-        <a href="">Gerold Langenmayer <br> Moos 2 <br> 88260 Argenbühl <br> Tel.: 015755441802 <br></a>
-  
-         <a>© 2025 Lockenkopf. Alle Rechte vorbehalten.</a>
-        <br><a href="Kontakt.html">Kontakt</a>
-        <a href="Impressum.html">Impressum</a>
-  </ul> 
-
-   </nav>
-</footer>
-
-</head>  
 </body>
 </html>
