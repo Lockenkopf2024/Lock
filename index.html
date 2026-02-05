@@ -409,6 +409,376 @@ a:hover .footer {
   box-shadow: none;
 }
 }
+@media (min-width: 800px) {
+.background-image {
+    position: fixed;
+   filter: brightness(0.75);
+    top: 0; left: 0; right: 0px; bottom: 0;
+    background-image: url('Startseite/Bilder/back2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  /* Radialer Verlauf als Overlay mit kreisförmig zunehmender Transparenz */
+  .background-gradient {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center,
+ rgba(255, 255, 255, 0.3) 85%,
+    rgba(221, 214, 50, 0.35) 90%,    /* transparent in der Mitte */
+      rgba(61, 89, 25, 0.45) 95%,   /* halbtransparent außenrum */
+      rgba(120, 15, 15, 0.5) 99% /* fast deckend am Rand */
+    
+      );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Inhalt über den Hintergründen */
+  .content {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    color: #206708;
+  }
+
+  /* Beispiel-Styling der Menüs */
+  .M {
+    position: absolute;
+    margin-top: -30%;
+    left: 100px;
+    font-size: 35px;
+    display: flex;
+      justify-content: center;  /* horizontal zentrieren */
+  align-items: center; 
+    flex-direction: column;
+    color: #206708;
+
+     
+    transition: transform 0.5s ease
+
+  }
+
+  .M1 {
+    position: absolute;
+ 
+    top: 5%;
+    right: 100px;
+    font-size: 30px;
+    display: flex;
+  justify-content: left;  /* horizontal zentrieren */
+  align-items: left; 
+    flex-direction: column;
+   
+  }
+
+  a {
+    position: relative;
+    margin-top: 12%;
+    box-sizing: content-box ;
+     text-align: center;
+    width: 400px;
+    height: auto;
+    color: #206708;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px 10px rgb(255, 255, 255);
+    border-radius: 15px;
+    overflow: hidden;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+  .b{
+
+  background-color: rgb(255, 255, 255, 1);
+  box-shadow: 0px 0px 30px 10px rgb(255, 255, 255);
+  border-radius: 15px;
+  overflow: hidden;
+       /* wie bisher */
+ display: flex;
+    align-items: center;
+    flex-direction: column;
+  box-sizing: content-box;
+  width: 400px;
+  height: auto;
+
+
+  }
+
+  .vidd {
+    position: absolute;
+  
+      display: flex;
+  justify-content: center;  /* horizontal zentrieren */
+  align-items: center;      /* vertikal zentrieren */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 60px 20px rgba(255, 255, 255, 1);
+    border-radius: 900px;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+  }
+
+  .ovid {
+      display: flex;
+  justify-content: center;  /* horizontal zentrieren */
+  align-items: center;      /* vertikal zentrieren */
+  height: 80vh;  
+
+  }
+video {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+video:hover {
+  transform: scale(1.25);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
+}
+  .Loco {
+    display: none;
+    position: absolute;
+    top: 0%;
+    right: 50px;
+    width: 40px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .Loco1 {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 50px;
+    width: 40px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  a:hover .Loco {
+    display: block;
+    
+  }
+   a:hover .Loco1 {
+    display: block;
+    
+  }
+  a:hover {
+  color: #780F0F; /* Textfarbe ändern */
+ box-shadow: 3px 3px 5px #DDD632 ; /* Schatten hinzufügen */
+ background: radial-gradient(circle at center,
+ rgb(255, 255, 255, 0.7) 85%,
+    rgba(120, 15, 15, 0.55) 90%,    /* transparent in der Mitte */
+      rgba(61, 89, 25, 0.6) 95%,   /* halbtransparent außenrum */
+      rgba(221, 214, 50, 0.65) 99% );/* fast deckend am Rand */
+
+      
+}
+.Leistungen, .vid, .Kontakt,.Wissenstransfer,.Bilder{
+  display: none;
+}
+.footer {
+
+  z-index: 200;
+    background-color: #333 !important;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+
+a:hover .footer {
+  display: block;
+}
+.footer a{
+  background-color: #ffffff;
+  color: black;
+  font-size: small;
+  box-shadow: none;
+}
+}
+@media (min-width: 1280px) {
+.background-image {
+    position: fixed;
+   filter: brightness(0.75);
+    top: 0; left: 0; right: 0px; bottom: 0;
+    background-image: url('Startseite/Bilder/back2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 0;
+  }
+
+  /* Radialer Verlauf als Overlay mit kreisförmig zunehmender Transparenz */
+  .background-gradient {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at center,
+ rgba(255, 255, 255, 0.3) 85%,
+    rgba(221, 214, 50, 0.35) 90%,    /* transparent in der Mitte */
+      rgba(61, 89, 25, 0.45) 95%,   /* halbtransparent außenrum */
+      rgba(120, 15, 15, 0.5) 99% /* fast deckend am Rand */
+    
+      );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Inhalt über den Hintergründen */
+  .content {
+    position: relative;
+    z-index: 10;
+    padding: 20px;
+    color: #206708;
+  }
+
+  /* Beispiel-Styling der Menüs */
+  .M {
+    position: absolute;
+    margin-top: 28%;
+    left: 100px;
+    font-size: 35px;
+    display: flex;
+      justify-content: center;  /* horizontal zentrieren */
+  align-items: center; 
+    flex-direction: column;
+    color: #206708;
+
+     
+    transition: transform 0.5s ease
+
+  }
+
+  .M1 {
+    position: absolute;
+ 
+    top: 13%;
+    right: 100px;
+    font-size: 30px;
+    display: flex;
+  justify-content: left;  /* horizontal zentrieren */
+  align-items: left; 
+    flex-direction: column;
+   
+  }
+
+  a {
+    position: relative;
+    margin-top: 12%;
+    box-sizing: content-box ;
+     text-align: center;
+    width: 400px;
+    height: auto;
+    color: #206708;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 30px 10px rgb(255, 255, 255);
+    border-radius: 15px;
+    overflow: hidden;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+  .b{
+
+  background-color: rgb(255, 255, 255, 1);
+  box-shadow: 0px 0px 30px 10px rgb(255, 255, 255);
+  border-radius: 15px;
+  overflow: hidden;
+       /* wie bisher */
+ display: flex;
+    align-items: center;
+    flex-direction: column;
+  box-sizing: content-box;
+  width: 400px;
+  height: auto;
+
+
+  }
+
+  .vidd {
+    position: absolute;
+  
+      display: flex;
+  justify-content: center;  /* horizontal zentrieren */
+  align-items: center;      /* vertikal zentrieren */
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 60px 20px rgba(255, 255, 255, 1);
+    border-radius: 900px;
+    overflow: hidden;
+    height: 500px;
+    width: 500px;
+  }
+
+  .ovid {
+      display: flex;
+  justify-content: center;  /* horizontal zentrieren */
+  align-items: center;      /* vertikal zentrieren */
+  height: 80vh;  
+
+  }
+video {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+video:hover {
+  transform: scale(1.25);
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
+}
+  .Loco {
+    display: none;
+    position: absolute;
+    top: 0%;
+    right: 50px;
+    width: 40px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .Loco1 {
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 50px;
+    width: 40px;
+    z-index: 10;
+    pointer-events: none;
+  }
+  a:hover .Loco {
+    display: block;
+    
+  }
+   a:hover .Loco1 {
+    display: block;
+    
+  }
+  a:hover {
+  color: #780F0F; /* Textfarbe ändern */
+ box-shadow: 3px 3px 5px #DDD632 ; /* Schatten hinzufügen */
+ background: radial-gradient(circle at center,
+ rgb(255, 255, 255, 0.7) 85%,
+    rgba(120, 15, 15, 0.55) 90%,    /* transparent in der Mitte */
+      rgba(61, 89, 25, 0.6) 95%,   /* halbtransparent außenrum */
+      rgba(221, 214, 50, 0.65) 99% );/* fast deckend am Rand */
+
+      
+}
+.Leistungen, .vid, .Kontakt,.Wissenstransfer,.Bilder{
+  display: none;
+}
+.footer {
+
+  z-index: 200;
+    background-color: #333 !important;      /* Dunkler Hintergrund */
+    color: white;                /* Weißer Text */
+    text-align: center;          /* Zentrierter Text */
+    padding: 20px 0;             /* Innenabstände oben/unten */
+    margin-top: auto;            /* Automatischer Abstand oben */
+}
+
+a:hover .footer {
+  display: block;
+}
+.footer a{
+  background-color: #ffffff;
+  color: black;
+  font-size: small;
+  box-shadow: none;
+}
+}
   </style>
 
 
@@ -425,7 +795,7 @@ a:hover .footer {
 <a href="Kontakt.html">Kontakt</a>
 </div>
 <div class="Bilder">
-<a href="Bilder.html">Bilder</a>
+<a href="Infos.html">Infos</a>
 </div>
 <div class="Wissenstransfer">
   <a href="Impressum.html">Impressum</a>
